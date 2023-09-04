@@ -1,0 +1,26 @@
+// For use in the code base
+$primary: #0B1F3A; // 100
+$accent: #FF0028;
+$text-body: #0B1F3A;
+$text-body-gray: #6D7989; // 60
+$dark: #071323; // 180
+$gray: #E7E9EC; // 10
+$gray-light: #F3F4F5; // 5
+$gray-dark: #3C4C61; // 80
+$stroke: #CED2D8;
+$stroke-dark: #24364E;
+$white: #ffffff;
+$black: #000000;
+
+// For creating utility classes
+$colors: (
+    primary: #0B1F3A,
+    accent: #FF0028,
+    text-body: #0B1F3A,
+    text-body-gray: #6D7989,
+    gray: #E7E9EC,
+    dark: #071323,
+    gray-light: #F3F4F5,
+    gray-dark: #3C4C61,
+    stroke: #CED2D8,
+);

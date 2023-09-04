@@ -1,0 +1,29 @@
+// Border collapse
+
+.border-collapse {
+  border-collapse: collapse;
+}
+
+.border-separate {
+  border-collapse: separate;
+}
+
+// Layout
+
+.table-auto {
+  table-layout: auto;
+}
+
+.table-fixed {
+  table-layout: fixed;
+}
+
+// Caption side
+
+.caption-top {
+  caption-side: top;
+}
+
+.caption-bottom {
+  caption-side: bottom;
+}

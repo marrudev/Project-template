@@ -1,0 +1,66 @@
+@use "../abstracts/" as *;
+
+@each $size,
+$value in $sizes {
+    .m-#{$size} {
+        margin: #{$value};
+    }
+}
+
+@each $size,
+$value in $sizes {
+    .mx-#{$size} {
+        margin-inline: #{$value};
+    }
+}
+
+@each $size,
+$value in $sizes {
+    .my-#{$size} {
+        margin-top: #{$value};
+        margin-bottom: #{$value};
+    }
+}
+
+@each $size,
+$value in $sizes {
+    .ms-#{$size} {
+        margin-inline-start: #{$value};
+    }
+}
+
+@each $size,
+$value in $sizes {
+    .me-#{$size} {
+        margin-inline-end: #{$value};
+    }
+}
+
+@each $size,
+$value in $sizes {
+    .mt-#{$size} {
+        margin-top: #{$value};
+    }
+}
+
+@each $size,
+$value in $sizes {
+    .mr-#{$size} {
+        margin-right: #{$value};
+    }
+}
+
+@each $size,
+$value in $sizes {
+    .mb-#{$size} {
+        margin-bottom: #{$value};
+    }
+}
+
+@each $size,
+$value in $sizes {
+    .ml-#{$size} {
+        margin-left: #{$value};
+    }
+}
+

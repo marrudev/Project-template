@@ -1,0 +1,16 @@
+@use "../abstracts/" as *;
+
+.section, section {
+
+    &.padding-both {
+        padding: $padding-section 0;
+    }
+
+    &.padding-top {
+        padding-bottom: $padding-section;
+    }
+
+    &.padding-bot {
+        padding: $padding-section;
+    }
+}

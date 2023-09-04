@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-src][data-cookiecategory="social"]').forEach((e=>{e.setAttribute("src",e.dataset.src),delete e.dataset.src})),document.querySelectorAll("[data-cookie-placeholder]").forEach((e=>{e.removeAttribute("data-cookie-placeholder")}));

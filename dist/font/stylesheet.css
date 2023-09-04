@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'Work Sans';
+    src: url('WorkSans-Thin.eot');
+    src: local('Work Sans Thin'), local('WorkSans-Thin'),
+        url('WorkSans-Thin.eot?#iefix') format('embedded-opentype'),
+        url('WorkSans-Thin.woff2') format('woff2'),
+        url('WorkSans-Thin.woff') format('woff'),
+        url('WorkSans-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('WorkSans-ExtraLight.eot');
+    src: local('Work Sans ExtraLight'), local('WorkSans-ExtraLight'),
+        url('WorkSans-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('WorkSans-ExtraLight.woff2') format('woff2'),
+        url('WorkSans-ExtraLight.woff') format('woff'),
+        url('WorkSans-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('WorkSans-Regular.eot');
+    src: local('Work Sans'), local('WorkSans-Regular'),
+        url('WorkSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('WorkSans-Regular.woff2') format('woff2'),
+        url('WorkSans-Regular.woff') format('woff'),
+        url('WorkSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('WorkSans-Medium.eot');
+    src: local('Work Sans Medium'), local('WorkSans-Medium'),
+        url('WorkSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('WorkSans-Medium.woff2') format('woff2'),
+        url('WorkSans-Medium.woff') format('woff'),
+        url('WorkSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('WorkSans-SemiBold.eot');
+    src: local('Work Sans SemiBold'), local('WorkSans-SemiBold'),
+        url('WorkSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('WorkSans-SemiBold.woff2') format('woff2'),
+        url('WorkSans-SemiBold.woff') format('woff'),
+        url('WorkSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('WorkSans-Bold.eot');
+    src: local('Work Sans Bold'), local('WorkSans-Bold'),
+        url('WorkSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('WorkSans-Bold.woff2') format('woff2'),
+        url('WorkSans-Bold.woff') format('woff'),
+        url('WorkSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('WorkSans-ExtraBold.eot');
+    src: local('Work Sans ExtraBold'), local('WorkSans-ExtraBold'),
+        url('WorkSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('WorkSans-ExtraBold.woff2') format('woff2'),
+        url('WorkSans-ExtraBold.woff') format('woff'),
+        url('WorkSans-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('WorkSans-Black.eot');
+    src: local('Work Sans Black'), local('WorkSans-Black'),
+        url('WorkSans-Black.eot?#iefix') format('embedded-opentype'),
+        url('WorkSans-Black.woff2') format('woff2'),
+        url('WorkSans-Black.woff') format('woff'),
+        url('WorkSans-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hrot Premium';
+    src: url('HrotPremium-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hrot Premium';
+    src: url('HrotPremium-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+
+

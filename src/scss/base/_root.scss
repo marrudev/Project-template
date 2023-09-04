@@ -1,0 +1,10 @@
+@use "../abstracts" as *;
+
+:root {
+  @each $color, $value in $colors {
+      --#{$color}: #{$value};
+    }
+    
+    --cc-btn-primary-bg: #0B1F3A;
+    --cc-btn-primary-hover-bg: #050f1d;
+}

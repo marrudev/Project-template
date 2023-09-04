@@ -1,0 +1,213 @@
+:root {
+  --primary: #0B1F3A;
+  --accent: #FF0028;
+  --text-body: #0B1F3A;
+  --text-body-gray: #6D7989;
+  --gray: #E7E9EC;
+  --dark: #071323;
+  --gray-light: #F3F4F5;
+  --gray-dark: #3C4C61;
+  --stroke: #CED2D8;
+  --cc-btn-primary-bg: #0B1F3A;
+  --cc-btn-primary-hover-bg: #050f1d;
+}
+
+/* CSS Reset */
+/* -------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  html {
+    scroll-behavior: initial;
+  }
+}
+/* Typography */
+/* -------------------------------------------------------------------- */
+::-moz-selection {
+  background: #FF0028;
+  color: white;
+}
+::selection {
+  background: #FF0028;
+  color: white;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #0B1F3A;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:not([class]) {
+  color: #FF0028;
+  text-decoration: none;
+}
+
+a:not([class]):is(:hover, :focus) {
+  text-decoration: underline;
+  text-decoration-thickness: max(0.08em, 1px);
+  text-underline-offset: 0.15em;
+  cursor: pointer;
+}
+.button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #FF0028;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 1rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.button:is(:hover, :focus) {
+  background-color: #0B1F3A;
+  color: #ffffff;
+}
+.button.secondary {
+  background-color: #0B1F3A;
+}
+.button.secondary:is(:hover, :focus) {
+  background-color: #FF0028;
+}
+.button.outlined {
+  background-color: transparent;
+  color: #FF0028;
+  border: 1px solid #FF0028;
+}
+.button.outlined:is(:hover, :focus) {
+  background-color: #FF0028;
+  color: #ffffff;
+}
+footer, .footer {
+  background-color: #0B1F3A;
+  padding: 2.5rem 0;
+  color: #ffffff;
+}
+footer a, .footer a {
+  color: #ffffff;
+  font-size: 0.85rem;
+}
+.form, form {
+  display: grid;
+}
+
+label {
+  color: #0B1F3A;
+  font-size: 0.85rem;
+}
+
+input:not(.button) {
+  font-size: 1rem;
+  color: #0B1F3A;
+  background-color: #ffffff;
+  padding: 1rem 1.5rem;
+  border: solid 1px #CED2D8;
+  border-radius: 0.25rem;
+}
+
+::-webkit-input-placeholder {
+  color: #0B1F3A;
+}
+
+::-moz-placeholder {
+  color: #0B1F3A;
+}
+
+:-ms-input-placeholder {
+  color: #0B1F3A;
+}
+
+::-ms-input-placeholder {
+  color: #0B1F3A;
+}
+
+::placeholder {
+  color: #0B1F3A;
+}
+.container {
+  --container-max-width: 1400px;
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 0.7653rem + 0.8163vw, 1.5rem);
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Custom CSS */
+/* -------------------------------------------------------------------- */

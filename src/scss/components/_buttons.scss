@@ -1,0 +1,44 @@
+@use "../abstracts" as *;
+
+/* purgecss start ignore */
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  background-color: $accent;
+  color: $white;
+  font-family: $ff-base;
+  font-size: $fs-regular;
+  font-weight: $fw-bold;
+  line-height: 1.2;
+  padding: 1rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: $transition;
+
+  &:is(:hover, :focus) {
+    background-color: $primary;
+    color: $white;
+  }
+
+  &.secondary {
+    background-color: $primary;
+
+    &:is(:hover, :focus) {
+        background-color: $accent;
+    }
+  }
+
+  &.outlined {
+    background-color: transparent;
+    color: $accent;
+    border: 1px solid $accent;
+
+    &:is(:hover, :focus) {
+      background-color: $accent;
+      color: $white;
+    }
+  }
+}
+
+/* purgecss end ignore */

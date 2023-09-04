@@ -1,0 +1,12 @@
+{
+  "printWidth": 120,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "bracketSameLine": true,
+  "bracketSpacing": false,
+  "quoteProps": "consistent",
+  "trailingComma": "none",
+  "arrowParens": "avoid",
+  "cssEnable": ["css", "less", "sass"],
+  "htmlWhitespaceSensitivity": "css"
+}

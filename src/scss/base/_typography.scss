@@ -1,0 +1,219 @@
+@use "../abstracts/" as *;
+
+/* Typography */
+/* -------------------------------------------------------------------- */
+
+::selection {
+    background: $accent;
+    color: white;
+}
+
+body {
+    font-family: $ff-base;
+    font-weight: $fw-regular;
+    font-size: $fs-regular;
+    line-height: 1.6;
+    color: $text-body;
+}
+
+.fs-small {
+    font-size: $fs-small;
+}
+
+h1, .h1 {
+    font-family: $ff-accent;
+    font-size: clamp(1.5rem, 0.5909rem + 4.5455vw, 4rem);
+    font-weight: 700;
+}
+
+h2, .h2 {
+    font-family: $ff-accent;
+    font-size: clamp(1.5rem, 1.0714rem + 2.1429vw, 3rem);
+    font-weight: 700;
+}
+
+h3, .h3 {
+    font-family: $ff-accent;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h4, .h4 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+h1, h2, h3, h4, .h2, .h2, .h3, .h4 {
+    line-height: 1.2;
+    color: $primary;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:not([class]) {
+    color: $accent;
+    text-decoration: none;
+}
+  
+a:not([class]):is(:hover, :focus) {
+    text-decoration: underline;
+    text-decoration-thickness: max(0.08em, 1px);
+    text-underline-offset: 0.15em;
+    cursor: pointer;
+}
+
+// Font colors
+
+@each $color,
+$value in $colors {
+    .fc--#{$color} {
+        color: #{$value};
+    }
+}
+
+// Font weights
+
+.fw-thin {
+    font-weight: 100;
+}
+
+.fw-extralight {
+    font-weight: 200;
+}
+
+.fw-light {
+    font-weight: 300;
+}
+
+.fw-normal {
+    font-weight: 400;
+}
+
+.fw-medium {
+    font-weight: 500;
+}
+
+.fw-semibold {
+    font-weight: 600;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.fw-extrabold {
+    font-weight: 800;
+}
+
+.fw-black {
+    font-weight: 900;
+}
+
+// Text Align
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-start {
+    text-align: start;
+}
+
+.text-end {
+    text-align: end;
+}
+
+// Decoration
+
+.underline {
+    text-decoration-line: underline;
+}
+
+.overline {
+    text-decoration-line: overline;
+}
+
+.line-through {
+    text-decoration-line: line-through;
+}
+
+.no-underline {
+    text-decoration-line: none;
+}
+
+// Transform
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.normal-case {
+    text-transform: none;
+}
+
+// Whitespace
+
+.whitespace-normal {
+    white-space: normal;
+}
+
+.whitespace-nowrap {
+    white-space: nowrap;
+}
+
+.whitespace-pre {
+    white-space: pre;
+}
+
+.whitespace-pre-line {
+    white-space: pre-line;
+}
+
+.whitespace-pre-wrap {
+    white-space: pre-wrap;
+}
+
+.whitespace-break-spaces {
+    white-space: break-spaces;
+}
+
+// Break Words
+
+.break-normal {
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.break-words {
+    overflow-wrap: break-word;
+}
+
+.break-all {
+    word-break: break-all;
+}
+
+.break-keep {
+    word-break: keep-all;
+}

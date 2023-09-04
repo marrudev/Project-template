@@ -1,0 +1,27 @@
+@use "../abstracts/" as *;
+
+footer, .footer  {
+  background-color: $primary;
+  padding: 2.5rem 0;
+  color: $white;
+
+  a {
+    color: $white;
+    font-size: $fs-small;
+  }
+
+  h2, .h2 {
+    color: $white;
+    margin-bottom: 0.8em;
+  }
+
+  .footer-logo {
+    max-width: 200px;
+  }
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}

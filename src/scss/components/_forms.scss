@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+/* purgecss start ignore */
+
+.form, form {
+    display: grid;
+}
+
+label {
+  color: $primary;
+  font-size: $fs-small;
+}
+
+input:not(.button) {
+  font-size: $fs-regular;
+  color: $primary;
+  background-color: $white;
+  padding: 1rem 1.5rem;
+  border: solid 1px $stroke;
+  border-radius: $border-radius-sm;
+}
+
+::placeholder {
+  color: $text-body;
+}
+
+/* purgecss end ignore */

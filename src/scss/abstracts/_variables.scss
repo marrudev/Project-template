@@ -1,0 +1,43 @@
+@use "colors" as *;
+@use "sizes" as *;
+
+//Typography
+$ff-sans: "Roboto", sans-serif; 
+$ff-serif: "Roboto", serif; 
+$ff-base: $ff-sans;
+$ff-accent: $ff-serif;
+
+$fw-thin: 100;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-black: 900;
+
+$fs-regular: 1rem;
+$fs-small: 0.85rem;
+
+// Paddings
+$padding-default: clamp(1rem, 0.7653rem + 0.8163vw, 1.5rem);
+$padding-site: clamp(1rem, 0.7653rem + 0.8163vw, 1.5rem);
+$padding-section: clamp(4rem, 2.3571rem + 5.7143vw, 7.5rem);
+
+// Containers
+$container-max-width: 1400px;
+$container-max-width-narrow: 900px;
+$container-max-width-article: 900px;
+
+// Breakpoints
+$medium-small: 440px;
+$medium-medium: 768px;
+$medium-large: 992px;
+
+// Transitions
+$transition: all 300ms ease-in-out;
+
+// Border radius
+$border-radius-sm: 0.25rem;
+$border-radius: 0.5rem;
+$border-radius-md: 1rem;
+$border-radius-lg: 1.5rem;
