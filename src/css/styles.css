@@ -1829,14 +1829,17 @@ header {
   border-bottom-left-radius: 1.5rem;
 }
 
-.section.padding-both, section.padding-both {
+.section.padding-both,
+section.padding-both {
   padding: clamp(4rem, 2.3571rem + 5.7143vw, 7.5rem) 0;
 }
-.section.padding-top, section.padding-top {
-  padding-bottom: clamp(4rem, 2.3571rem + 5.7143vw, 7.5rem);
+.section.padding-top,
+section.padding-top {
+  padding-top: clamp(4rem, 2.3571rem + 5.7143vw, 7.5rem);
 }
-.section.padding-bot, section.padding-bot {
-  padding: clamp(4rem, 2.3571rem + 5.7143vw, 7.5rem);
+.section.padding-bot,
+section.padding-bot {
+  padding-bottom: clamp(4rem, 2.3571rem + 5.7143vw, 7.5rem);
 }
 
 .shadow-none {
