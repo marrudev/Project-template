@@ -1,6 +1,185 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 /* purgecss start ignore */
 
+header {
+  position: fixed;
+  background: $primary;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 72px;
+  padding: 1rem 0;
+}
+
+.nav-logo {
+  height: 36px;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+  padding-left: 0;
+
+  img {
+    display: none;
+  }
+
+  a {
+    background: $primary;
+    color: $white;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+
+    &:is(:hover, :focus) {
+      background: $accent;
+      text-decoration: none;
+    }
+  }
+}
+
+/* Menu button */
+
+.menu-btn {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+.menu-btn-burger {
+  width: 24px;
+  height: 2px;
+  background: $white;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: $white;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+}
+.menu-btn-burger::before {
+  transform: translateY(-10px);
+}
+.menu-btn-burger::after {
+  transform: translateY(10px);
+}
+
+/* Animation */
+
+.menu-btn.open .menu-btn-burger {
+  transform: translateX(-50px);
+  background: transparent;
+}
+.menu-btn.open .menu-btn-burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  background: $white;
+}
+.menu-btn.open .menu-btn-burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  background: $white;
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+  .nav-menu {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    height: calc(100vh - 72px);
+    padding-inline: $padding-site;
+    background-color: $primary;
+    transform: translateX(100%);
+    transition: $transition;
+    z-index: 100;
+    overflow: auto;
+
+    .nav-menu-list {
+      padding: 1rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 100%;
+    }
+
+    .nav-menu-list img {
+      display: block;
+      max-height: 24px;
+      padding-bottom: 2rem;
+    }
+  }
+
+  .nav-menu-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 1rem 1.5rem;
+    border-radius: $border-radius-sm;
+
+    @media (max-width: 479px) {
+      padding-inline: clamp(1rem, -1.88rem + 12.8vw, 5rem);
+      border-radius: 0;
+    }
+  }
+
+  .nav-menu-list a {
+    display: flex;
+    width: 100%;
+    font-size: 1rem;
+    background: transparent;
+    text-transform: none;
+
+    &:is(:hover, :focus) {
+      background: transparent;
+    }
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+}
+
+@media (max-width: 479px) {
+  .nav-menu {
+    padding-inline: 0;
+  }
+}
 
 /* purgecss end ignore */

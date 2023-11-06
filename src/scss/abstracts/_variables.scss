@@ -1,9 +1,9 @@
-@use "colors" as *;
-@use "sizes" as *;
+@use 'colors' as *;
+@use 'sizes' as *;
 
 //Typography
-$ff-sans: "Roboto", sans-serif; 
-$ff-serif: "Roboto", serif; 
+$ff-sans: 'Roboto', sans-serif;
+$ff-serif: 'Roboto', serif;
 $ff-base: $ff-sans;
 $ff-accent: $ff-serif;
 

@@ -49,15 +49,11 @@ h1, h2, h3, h4, .h2, .h2, .h3, .h4 {
 }
 
 a {
-    text-decoration: none;
-}
-
-a:not([class]) {
     color: $accent;
     text-decoration: none;
 }
-  
-a:not([class]):is(:hover, :focus) {
+
+a:is(:hover, :focus) {
     text-decoration: underline;
     text-decoration-thickness: max(0.08em, 1px);
     text-underline-offset: 0.15em;
