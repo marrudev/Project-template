@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 /* CSS Reset */
 /* -------------------------------------------------------------------- */
@@ -40,13 +40,28 @@ body {
   overflow-x: hidden;
 }
 
-img, picture, svg, video {
+svg,
+video {
   display: block;
   max-width: 100%;
 }
 
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 1rem;
+}
+
 /* Inherit fonts for inputs and buttons */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
