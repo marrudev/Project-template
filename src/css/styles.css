@@ -51,13 +51,28 @@ body {
   overflow-x: hidden;
 }
 
-img, picture, svg, video {
+svg,
+video {
   display: block;
   max-width: 100%;
 }
 
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 1rem;
+}
+
 /* Inherit fonts for inputs and buttons */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
@@ -705,6 +720,95 @@ header {
   }
 }
 /* purgecss end ignore */
+article,
+.article-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(1rem, 0.5714rem + 2.1429vw, 2.5rem);
+  border-radius: 1rem;
+}
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+.article-item h1,
+.article-item h2,
+.article-item h3,
+.article-item h4,
+.article-item h5 {
+  text-align: start;
+  margin-bottom: 0;
+}
+article > *,
+.article-item > * {
+  margin-top: 1em;
+}
+article > :first-child,
+.article-item > :first-child {
+  margin-top: 0;
+}
+article h2,
+.article-item h2 {
+  font-size: clamp(1.5rem, 1.3571rem + 0.7143vw, 2rem);
+  font-weight: 600;
+  margin-top: 2em;
+}
+article h3,
+.article-item h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0B1F3A;
+  margin-top: 2em;
+}
+article h3,
+.article-item h3 {
+  margin-top: 2.5rem;
+}
+article img,
+.article-item img {
+  width: 100%;
+}
+article ol,
+.article-item ol {
+  list-style: none;
+  padding: 0;
+}
+article ol li:not(:first-child),
+.article-item ol li:not(:first-child) {
+  margin-top: 1rem !important;
+}
+article ul,
+.article-item ul {
+  padding: 0;
+  margin-bottom: 0;
+  list-style-position: inside;
+}
+
+.perex {
+  font-size: 1.25rem;
+}
+
+q::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #0B1F3A;
+}
+
 .container {
   --container-max-width: 1400px;
   width: 100%;

@@ -50,13 +50,28 @@ body {
   overflow-x: hidden;
 }
 
-img, picture, svg, video {
+svg,
+video {
   display: block;
   max-width: 100%;
 }
 
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 1rem;
+}
+
 /* Inherit fonts for inputs and buttons */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
@@ -93,6 +108,23 @@ body {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.6;
+  color: #0B1F3A;
+}
+
+h2, .h2 {
+  font-family: "Roboto", serif;
+  font-size: clamp(1.5rem, 1.0714rem + 2.1429vw, 3rem);
+  font-weight: 700;
+}
+
+h3, .h3 {
+  font-family: "Roboto", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+ h2, h3, .h2, .h2, .h3 {
+  line-height: 1.2;
   color: #0B1F3A;
 }
 
@@ -457,6 +489,57 @@ header {
     padding-inline: 0;
   }
 }
+article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(1rem, 0.5714rem + 2.1429vw, 2.5rem);
+  border-radius: 1rem;
+}
+
+article h2,
+article h3 {
+  text-align: start;
+  margin-bottom: 0;
+}
+article > * {
+  margin-top: 1em;
+}
+article > :first-child {
+  margin-top: 0;
+}
+article h2 {
+  font-size: clamp(1.5rem, 1.3571rem + 0.7143vw, 2rem);
+  font-weight: 600;
+  margin-top: 2em;
+}
+article h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0B1F3A;
+  margin-top: 2em;
+}
+article h3 {
+  margin-top: 2.5rem;
+}
+article img {
+  width: 100%;
+}
+article ul {
+  padding: 0;
+  margin-bottom: 0;
+  list-style-position: inside;
+}
+
 .container {
   --container-max-width: 1400px;
   width: 100%;
@@ -490,6 +573,10 @@ header {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.w-full {
+  width: 100%;
 }
 
 /* Custom CSS */
