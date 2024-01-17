@@ -13,6 +13,9 @@ node_modules/
 # Package files
 *.jar
 
+# Maven
+target/
+
 # JetBrains IDE
 .idea/
 
