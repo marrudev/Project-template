@@ -11,11 +11,25 @@
   box-sizing: border-box;
 }
 
+/* Set body defaults */
+html,
+body {
+  hanging-punctuation: first last;
+}
+
+body {
+  min-height: 100svh;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Margins */
 body,
 h1,
 h2,
 h3,
 h4,
+h5,
 p,
 figure,
 blockquote,
@@ -24,22 +38,21 @@ dd {
   margin: 0;
 }
 
-html,
-body {
-  overflow-x: hidden;
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-wrap: balance;
 }
 
-html {
-  scroll-behavior: smooth;
+p,
+li {
+  text-wrap: pretty;
 }
 
-/* Set body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  overflow-x: hidden;
-}
-
+/* Images and other content */
 svg,
 video {
   display: block;
@@ -63,6 +76,14 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+/* Base animations and transitions for people without any preferences */
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2.5rem;
+  }
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
