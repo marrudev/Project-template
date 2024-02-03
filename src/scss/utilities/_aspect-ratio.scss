@@ -1,17 +1,17 @@
-@use "../abstracts/" as *;
+@use '../abstracts/' as *;
 
 .aspect-auto {
-    aspect-ratio: auto;
+  aspect-ratio: auto;
 }
 
 .aspect-square {
-    aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1;
 }
 
 .aspect-169 {
-    aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 9;
 }
 
 .aspect-43 {
-    aspect-ratio: 4 / 3;
-}   
+  aspect-ratio: 4 / 3;
+}

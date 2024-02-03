@@ -1,13 +1,13 @@
-@use "../abstracts/" as *;
+@use '../abstracts/' as *;
 
 .visible {
-    visibility: visible;
+  visibility: visible;
 }
 
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .collapse {
-    visibility: collapse;
+  visibility: collapse;
 }

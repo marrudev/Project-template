@@ -1,9 +1,10 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 /* purgecss start ignore */
 
-.form, form {
-    display: grid;
+.form,
+form {
+  display: grid;
 }
 
 label {

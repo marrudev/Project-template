@@ -1,65 +1,56 @@
-@use "../abstracts/" as *;
+@use '../abstracts/' as *;
 
-@each $size,
-$value in $sizes {
-    .p-#{$size} {
-        padding: #{$value};
-    }
+@each $size, $value in $sizes {
+  .p-#{$size} {
+    padding: #{$value};
+  }
 }
 
-@each $size,
-$value in $sizes {
-    .px-#{$size} {
-        padding-inline: #{$value};
-    }
+@each $size, $value in $sizes {
+  .px-#{$size} {
+    padding-inline: #{$value};
+  }
 }
 
-@each $size,
-$value in $sizes {
-    .py-#{$size} {
-        padding-top: #{$value};
-        padding-bottom: #{$value};
-    }
+@each $size, $value in $sizes {
+  .py-#{$size} {
+    padding-top: #{$value};
+    padding-bottom: #{$value};
+  }
 }
 
-@each $size,
-$value in $sizes {
-    .ps-#{$size} {
-        padding-inline-start: #{$value};
-    }
+@each $size, $value in $sizes {
+  .ps-#{$size} {
+    padding-inline-start: #{$value};
+  }
 }
 
-@each $size,
-$value in $sizes {
-    .pe-#{$size} {
-        padding-inline-end: #{$value};
-    }
+@each $size, $value in $sizes {
+  .pe-#{$size} {
+    padding-inline-end: #{$value};
+  }
 }
 
-@each $size,
-$value in $sizes {
-    .pt-#{$size} {
-        padding-top: #{$value};
-    }
+@each $size, $value in $sizes {
+  .pt-#{$size} {
+    padding-top: #{$value};
+  }
 }
 
-@each $size,
-$value in $sizes {
-    .pr-#{$size} {
-        padding-right: #{$value};
-    }
+@each $size, $value in $sizes {
+  .pr-#{$size} {
+    padding-right: #{$value};
+  }
 }
 
-@each $size,
-$value in $sizes {
-    .pb-#{$size} {
-        padding-bottom: #{$value};
-    }
+@each $size, $value in $sizes {
+  .pb-#{$size} {
+    padding-bottom: #{$value};
+  }
 }
 
-@each $size,
-$value in $sizes {
-    .pl-#{$size} {
-        padding-left: #{$value};
-    }
+@each $size, $value in $sizes {
+  .pl-#{$size} {
+    padding-left: #{$value};
+  }
 }
