@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: $ff-base, system-ui;
+  font-family: $ff-base;
   font-weight: $fw-regular;
   font-size: $fs-regular;
   line-height: 1.6;
@@ -30,28 +30,28 @@ h4,
 
 h1,
 .h1 {
-  font-family: $ff-accent, sans-serif;
+  font-family: $ff-accent;
   font-size: clamp(1.5rem, 0.5909rem + 4.5455vw, 4rem);
   font-weight: 700;
 }
 
 h2,
 .h2 {
-  font-family: $ff-accent, sans-serif;
+  font-family: $ff-accent;
   font-size: clamp(1.5rem, 1.0714rem + 2.1429vw, 3rem);
   font-weight: 700;
 }
 
 h3,
 .h3 {
-  font-family: $ff-accent, sans-serif;
+  font-family: $ff-accent;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
 h4,
 .h4 {
-  font-family: $ff-accent, sans-serif;
+  font-family: $ff-accent;
   font-size: 1rem;
   font-weight: 700;
 }
