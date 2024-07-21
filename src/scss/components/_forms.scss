@@ -5,24 +5,103 @@
 .form,
 form {
   display: grid;
+  gap: 1rem;
 }
 
-label {
-  color: $primary;
-  font-size: $fs-small;
+label,
+.form-label {
+  font-size: 0.75rem;
+  font-family: $ff-accent;
+  margin-bottom: 0.5rem;
 }
 
-input:not(.button) {
+input:not(.button, select),
+textarea {
+  width: 100%;
+  flex-grow: 1;
   font-size: $fs-regular;
   color: $primary;
   background-color: $white;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1rem;
   border: solid 1px $stroke;
-  border-radius: $border-radius-sm;
+  outline: none;
+  resize: none;
 }
 
 ::placeholder {
   color: $text-body;
+}
+
+.select {
+  display: grid;
+  grid-template-areas: 'select';
+  align-items: center;
+  flex-grow: 1;
+  position: relative;
+  border: 1px solid $stroke;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+
+  select,
+  &::after {
+    grid-area: select;
+  }
+
+  // Custom arrow
+  &::after {
+    content: '';
+    justify-self: end;
+    width: 0.6em;
+    height: 0.45em;
+    background-color: $text-body-light;
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  }
+}
+
+input:focus-within,
+textarea:focus-within {
+  border: 1px solid $primary;
+}
+
+// Checkbox
+input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.custom-checkbox {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: $white;
+  border: 2px solid $accent;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+/* Show the checkmark when the checkbox is checked */
+input[type='checkbox']:checked {
+  background-color: $accent;
+}
+
+/* Change background color when the checkbox is checked */
+input[type='checkbox']:checked + .custom-checkbox {
+  background-color: $accent;
+}
+
+/* Style the label */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-label span {
+  margin-left: 0.5rem;
+  font-family: $ff-base;
+  font-size: 1rem;
 }
 
 /* purgecss end ignore */

@@ -1,12 +1,9 @@
 // For use in the code base
-$primary: #0b1f3a; // 100
+$primary: #0b1f3a;
 $accent: #ff0028;
 $text-body: #0b1f3a;
-$text-body-gray: #6d7989; // 60
-$dark: #071323; // 180
-$gray: #e7e9ec; // 10
-$gray-light: #f3f4f5; // 5
-$gray-dark: #3c4c61; // 80
+$text-body-light: #6d7989;
+$gray: #e7e9ec;
 $stroke: #ced2d8;
 $stroke-dark: #24364e;
 $white: #ffffff;
@@ -17,10 +14,10 @@ $colors: (
   primary: #0b1f3a,
   accent: #ff0028,
   text-body: #0b1f3a,
-  text-body-gray: #6d7989,
+  text-body-light: #6d7989,
   gray: #e7e9ec,
-  dark: #071323,
-  gray-light: #f3f4f5,
-  gray-dark: #3c4c61,
-  stroke: #ced2d8
+  stroke: #ced2d8,
+  stroke-dark: #24364e,
+  white: #ffffff,
+  black: #000000
 );

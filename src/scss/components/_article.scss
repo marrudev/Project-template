@@ -1,22 +1,14 @@
 @use '../abstracts/' as *;
 
 article,
-.article-item {
+.article {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
-  background-color: $white;
-  padding: clamp(1rem, 0.5714rem + 2.1429vw, 2.5rem);
-  border-radius: $border-radius-md;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    text-align: start;
-    margin-bottom: 0;
+  & > img {
+    width: 100%;
   }
 
   & > * {
@@ -27,53 +19,46 @@ article,
     margin-top: 0;
   }
 
-  h2 {
-    font-size: clamp(1.5rem, 1.3571rem + 0.7143vw, 2rem);
-    font-weight: 600;
-    margin-top: 2em;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    text-align: start;
+    margin-bottom: 0;
   }
 
-  h3 {
+  .perex {
     font-size: 1.25rem;
-    font-weight: 600;
-    color: $primary;
-    margin-top: 2em;
-  }
-
-  h3 {
-    margin-top: 2.5rem;
   }
 
   img {
     width: 100%;
   }
 
+  ul,
   ol {
-    list-style: none;
+    margin: 0;
     padding: 0;
+    list-style-position: outside;
+    padding-left: 1rem;
 
     li:not(:first-child) {
-      margin-top: 1rem !important;
+      margin-top: 0.25rem;
+    }
+
+    li::marker {
+      color: $accent;
     }
   }
 
-  ul {
-    padding: 0;
-    margin-bottom: 0;
-    list-style-position: inside;
+  q::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: $primary;
   }
-}
-
-.perex {
-  font-size: 1.25rem;
-}
-
-q::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 2px;
-  height: 100%;
-  background-color: $primary;
 }

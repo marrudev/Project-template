@@ -3,4 +3,83 @@
 
 /* purgecss start ignore */
 
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: $stroke;
+
+  &.secondary {
+    background-color: $primary;
+  }
+}
+
+// Pagination
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  justify-content: center;
+  margin-top: 1rem;
+
+  a {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid $accent;
+    color: $accent;
+    border-radius: 2rem;
+    border-bottom-left-radius: 0;
+
+    &:is(:hover, :focus) {
+      background-color: $accent;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  a.active {
+    background-color: $accent;
+    color: $white;
+    font-weight: 700;
+  }
+}
+
+// Swipers
+
+.swiper-button-disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+
+  .swiper-pagination {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: relative;
+    margin-bottom: 1rem;
+    inset: 0;
+
+    .swiper-pagination-bullet {
+      width: 0.75rem;
+      height: 0.35rem;
+      border-radius: 0;
+      background-color: $text-body-gray-light;
+
+      &.swiper-pagination-bullet-active {
+        background-color: $accent;
+      }
+    }
+  }
+}
+
 /* purgecss end ignore */

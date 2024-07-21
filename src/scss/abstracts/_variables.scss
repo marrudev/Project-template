@@ -2,10 +2,8 @@
 @use 'sizes' as *;
 
 //Typography
-$ff-sans: 'Roboto', system-ui, sans-serif;
-$ff-serif: 'Roboto', serif;
-$ff-base: $ff-sans;
-$ff-accent: $ff-serif;
+$ff-base: 'Roboto', system-ui, sans-serif;
+$ff-accent: 'Roboto', serif;
 
 $fw-thin: 100;
 $fw-light: 300;
@@ -29,9 +27,10 @@ $container-max-width-narrow: 900px;
 $container-max-width-article: 900px;
 
 // Breakpoints
-$medium-small: 440px;
+$medium-small: 480px;
 $medium-medium: 768px;
 $medium-large: 992px;
+$medium-extra-large: 1200px;
 
 // Transitions
 $transition: all 300ms ease-in-out;

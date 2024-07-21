@@ -1,13 +1,14 @@
+@charset "UTF-8";
 :root {
   --primary: #0b1f3a;
   --accent: #ff0028;
   --text-body: #0b1f3a;
-  --text-body-gray: #6d7989;
+  --text-body-light: #6d7989;
   --gray: #e7e9ec;
-  --dark: #071323;
-  --gray-light: #f3f4f5;
-  --gray-dark: #3c4c61;
   --stroke: #ced2d8;
+  --stroke-dark: #24364e;
+  --white: #ffffff;
+  --black: #000000;
   --cc-btn-primary-bg: #0b1f3a;
   --cc-btn-primary-hover-bg: #050f1d;
 }
@@ -278,20 +279,29 @@ footer .footer-logo,
 .form,
 form {
   display: grid;
+  gap: 1rem;
 }
 
-label {
-  color: #0b1f3a;
-  font-size: 0.85rem;
+label,
+.form-label {
+  font-size: 0.75rem;
+  font-family: "Roboto", serif;
+  margin-bottom: 0.5rem;
 }
 
-input:not(.button) {
+input:not(.button, select),
+textarea {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   font-size: 1rem;
   color: #0b1f3a;
   background-color: #ffffff;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1rem;
   border: solid 1px #ced2d8;
-  border-radius: 0.25rem;
+  outline: none;
+  resize: none;
 }
 
 ::-webkit-input-placeholder {
@@ -313,16 +323,95 @@ input:not(.button) {
 ::placeholder {
   color: #0b1f3a;
 }
+
+.select {
+  display: grid;
+  grid-template-areas: "select";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  position: relative;
+  border: 1px solid #ced2d8;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+}
+.select select, .select::after {
+  grid-area: select;
+}
+.select::after {
+  content: "";
+  justify-self: end;
+  width: 0.6em;
+  height: 0.45em;
+  background-color: #6d7989;
+  -webkit-clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+          clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+input:focus-within,
+textarea:focus-within {
+  border: 1px solid #0b1f3a;
+}
+
+input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.custom-checkbox {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: #ffffff;
+  border: 2px solid #ff0028;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+/* Show the checkmark when the checkbox is checked */
+input[type=checkbox]:checked {
+  background-color: #ff0028;
+}
+
+/* Change background color when the checkbox is checked */
+input[type=checkbox]:checked + .custom-checkbox {
+  background-color: #ff0028;
+}
+
+/* Style the label */
+.checkbox-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-label span {
+  margin-left: 0.5rem;
+  font-family: "Roboto", system-ui, sans-serif;
+  font-size: 1rem;
+}
 header {
   position: fixed;
-  background: #0b1f3a;
   top: 0;
   right: 0;
   left: 0;
   z-index: 1000;
+  background: #0b1f3a;
 }
 
 .main-nav {
+  --main-nav-height: 72px;
+  width: 100%;
+  height: var(--main-nav-height);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -332,13 +421,11 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  height: 72px;
-  padding: 1rem 0;
+  gap: 2.5rem;
 }
 
 .nav-logo {
-  height: 36px;
+  height: 40px;
 }
 
 .nav-menu {
@@ -536,9 +623,24 @@ header {
   gap: 1rem;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-column-gap: clamp(1.5rem, 0.8333rem + 2.2222vw, 2.5rem);
+     -moz-column-gap: clamp(1.5rem, 0.8333rem + 2.2222vw, 2.5rem);
+          column-gap: clamp(1.5rem, 0.8333rem + 2.2222vw, 2.5rem);
+  row-gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  white-space: nowrap;
 }
 
-article {
+article,
+.article {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -549,44 +651,45 @@ article {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+article > img,
+.article > img {
   width: 100%;
-  background-color: #ffffff;
-  padding: clamp(1rem, 0.5714rem + 2.1429vw, 2.5rem);
-  border-radius: 1rem;
+}
+article > *,
+.article > * {
+  margin-top: 1em;
+}
+article > :first-child,
+.article > :first-child {
+  margin-top: 0;
 }
 
 article h2,
-article h3 {
+article h3,
+.article h2,
+.article h3 {
   text-align: start;
   margin-bottom: 0;
 }
-article > * {
-  margin-top: 1em;
-}
-article > :first-child {
-  margin-top: 0;
-}
-article h2 {
-  font-size: clamp(1.5rem, 1.3571rem + 0.7143vw, 2rem);
-  font-weight: 600;
-  margin-top: 2em;
-}
-article h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #0b1f3a;
-  margin-top: 2em;
-}
-article h3 {
-  margin-top: 2.5rem;
-}
-article img {
+article img,
+.article img {
   width: 100%;
 }
-article ul {
+article ul,
+.article ul {
+  margin: 0;
   padding: 0;
-  margin-bottom: 0;
-  list-style-position: inside;
+  list-style-position: outside;
+  padding-left: 1rem;
+}
+article ul li:not(:first-child),
+.article ul li:not(:first-child) {
+  margin-top: 0.25rem;
+}
+article ul li::marker,
+.article ul li::marker {
+  color: #ff0028;
 }
 .label {
   display: -webkit-box;
@@ -646,3 +749,56 @@ article ul {
 
 /* Custom CSS */
 /* -------------------------------------------------------------------- */
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #ced2d8;
+}
+.divider.secondary {
+  background-color: #0b1f3a;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.25rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1rem;
+}
+.pagination a {
+  width: 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  border: 1px solid #ff0028;
+  color: #ff0028;
+  border-radius: 2rem;
+  border-bottom-left-radius: 0;
+}
+.pagination a:is(:hover, :focus) {
+  background-color: #ff0028;
+  color: #ffffff;
+  text-decoration: none;
+}
+.pagination a.active {
+  background-color: #ff0028;
+  color: #ffffff;
+  font-weight: 700;
+}

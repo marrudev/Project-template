@@ -1,3 +1,104 @@
+@use '../abstracts/' as *;
+
+.table-w {
+  width: 100%;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    font-family: $ff-accent;
+    font-size: 0.85rem;
+    text-align: left;
+    color: $white;
+    background: $accent;
+    padding: 0.75rem clamp(0.5rem, 0.3333rem + 0.5556vw, 0.75rem);
+
+    &.is-sortable {
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        content: '▲';
+        position: absolute;
+        right: 0.25rem;
+        bottom: 45%;
+        font-size: 0.7rem;
+        opacity: 0.15;
+        pointer-events: none;
+      }
+
+      &::after {
+        content: '▼';
+        position: absolute;
+        right: 0.25rem;
+        top: 45%;
+        font-size: 0.7rem;
+        opacity: 0.15;
+        pointer-events: none;
+      }
+
+      &.ascending {
+        &::before {
+          opacity: 0.65;
+        }
+      }
+
+      &.descending {
+        &::after {
+          opacity: 0.65;
+        }
+      }
+    }
+  }
+
+  tr {
+    td {
+      /* text-align: center; */
+      border-bottom: 1px solid $stroke;
+      padding: 0.75rem clamp(0.5rem, 0.3333rem + 0.5556vw, 0.75rem);
+    }
+
+    .flex {
+      width: max-content;
+    }
+  }
+
+  tr.row-clickable:hover td {
+    background-color: $accent;
+    cursor: pointer;
+  }
+}
+
+tr.active {
+  td {
+    border-bottom: 1px solid $accent;
+  }
+
+  & ~ tr:last-child {
+    border-bottom: 1px solid $accent;
+  }
+}
+
+// Static page
+
+.static-text-main {
+  table {
+    th {
+      text-align: left;
+    }
+
+    tr {
+      td {
+        text-align: left;
+      }
+    }
+  }
+}
+
 // Border collapse
 
 .border-collapse {
