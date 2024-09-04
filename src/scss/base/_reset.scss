@@ -52,6 +52,14 @@ li {
   text-wrap: pretty;
 }
 
+header,
+footer,
+main,
+section,
+article {
+  container-type: inline-size;
+}
+
 /* Images and other content */
 svg,
 video {

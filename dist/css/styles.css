@@ -63,6 +63,14 @@ li {
   text-wrap: pretty;
 }
 
+header,
+footer,
+main,
+section,
+article {
+  container-type: inline-size;
+}
+
 /* Images and other content */
 svg,
 video {
@@ -801,4 +809,39 @@ article ul li::marker,
   background-color: #ff0028;
   color: #ffffff;
   font-weight: 700;
+}
+
+.swiper-button-disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper .swiper-pagination {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  position: relative;
+  margin-bottom: 1rem;
+  inset: 0;
+}
+.swiper .swiper-pagination .swiper-pagination-bullet {
+  width: 0.75rem;
+  height: 0.35rem;
+  border-radius: 0;
+  background-color: #0b1f3a;
+}
+.swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #ff0028;
 }
