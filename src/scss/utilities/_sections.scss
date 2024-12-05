@@ -21,4 +21,12 @@ section {
   &.padding-top-extra {
     padding-top: calc(#{$padding-section} * 2);
   }
+
+  &.padding-top-half {
+    padding-top: calc(#{$padding-section} / 2);
+  }
+
+  &.padding-bottom-half {
+    padding-bottom: calc(#{$padding-section} / 2);
+  }
 }
