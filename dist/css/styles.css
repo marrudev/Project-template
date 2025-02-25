@@ -354,7 +354,7 @@ textarea {
   justify-self: end;
   width: 0.6em;
   height: 0.45em;
-  background-color: #6d7989;
+  background-color: #0b1f3a;
   -webkit-clip-path: polygon(100% 0%, 0 0%, 50% 100%);
           clip-path: polygon(100% 0%, 0 0%, 50% 100%);
 }

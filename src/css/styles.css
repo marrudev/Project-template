@@ -672,7 +672,7 @@ textarea {
   justify-self: end;
   width: 0.6em;
   height: 0.45em;
-  background-color: #6d7989;
+  background-color: #0b1f3a;
   -webkit-clip-path: polygon(100% 0%, 0 0%, 50% 100%);
           clip-path: polygon(100% 0%, 0 0%, 50% 100%);
 }
@@ -2212,6 +2212,14 @@ section.padding-bottom-extra {
 .section.padding-top-extra,
 section.padding-top-extra {
   padding-top: calc(clamp(3rem, 1.5714rem + 4.5714vw, 5rem) * 2);
+}
+.section.padding-top-half,
+section.padding-top-half {
+  padding-top: calc(clamp(3rem, 1.5714rem + 4.5714vw, 5rem) / 2);
+}
+.section.padding-bottom-half,
+section.padding-bottom-half {
+  padding-bottom: calc(clamp(3rem, 1.5714rem + 4.5714vw, 5rem) / 2);
 }
 
 .shadow-none {
