@@ -4,8 +4,33 @@
 
 .form,
 form {
+  --form-gap: 1rem;
+
   display: grid;
-  gap: 1rem;
+  gap: var(--form-gap);
+
+  .form-items-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--form-gap);
+
+    .form-item {
+      flex-grow: 1;
+      min-width: min(320px, 100%);
+    }
+  }
+
+  .form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .required {
+    color: $accent;
+  }
 }
 
 label,

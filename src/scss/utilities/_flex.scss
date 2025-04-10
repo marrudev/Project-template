@@ -3,15 +3,17 @@
 // Flex Direction
 
 .flex-row {
+  display: flex;
   flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
 }
 
 .flex-row-reverse {
   flex-direction: row-reverse;
-}
-
-.flex-col {
-  flex-direction: column;
 }
 
 .flex-col-reverse {
@@ -26,19 +28,19 @@
 
 // Flex basis
 
-.basis-25 {
+.flex-basis-25 {
   flex-basis: 25%;
 }
 
-.basis-50 {
+.flex-basis-50 {
   flex-basis: 50%;
 }
 
-.basis-75 {
+.flex-basis-75 {
   flex-basis: 75%;
 }
 
-.basis-full {
+.flex-basis-full {
   flex-basis: 100%;
 }
 

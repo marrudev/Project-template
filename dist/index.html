@@ -2,16 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="resource-type" content="document" />
     <meta name="rating" content="general" />
     <meta name="distribution" content="global" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="index, follow" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
 
-    <title>FK Bohemians 1905</title>
+    <title>Webiste title</title>
     <!--- Preconnect--->
+    <link rel="preload" href="./font/xxx.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+    <link rel="preload" href="./font/xxx.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
     <!-- Asynchronní JS (GA etc.) -->
     <!--- @Import CSS --->
     <!--- Local CSS --->
@@ -27,18 +30,19 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta property="og:title" itemprop="name" content="" />
-    <meta property="og:url" content="" />
     <meta property="og:description" itemprop="description" content="XXXXX" />
     <meta property="og:image" content="URL_to_img" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="Webiste" />
+    <!-- HEAD 3 (Pokud má web backend) -->
     <!-- SEO, meta značky, ikony, Open Graph… -->
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta property="og:title" itemprop="name" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:description" itemprop="description" content="OG Description OG Description OG Description" />
+    <meta property="og:description" itemprop="description" content="XXXXX" />
     <meta property="og:image" content="URL_to_img" />
-
-    <!-- HEAD 3 je volitelný s custom textem nad ním - WEB S BE nebo bez nej!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="Webiste" />
     <!-- FAV -->
   </head>
   <body>
@@ -81,9 +85,57 @@
 
     <!---- Section ---->
     <main>
-      <section>
-        <div class="container"><a href="" class="button">Hello world</a></div>
-        <a href="">Hello lidi test link</a>
+      <section class="padding-both">
+        <div class="container">
+          <h1>Hello world</h1>
+          <p>Lorem ipsum dolor sit amet</p>
+          <a href="" class="button">Hello world</a>
+          <form id="contact-form" action="/submit-form" method="post" novalidate>
+            <div class="form-items-row">
+              <div class="form-item">
+                <label for="name" id="name-label">First Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" aria-labelledby="name-label" aria-required="true" required />
+                <div class="error-message" id="name-error" aria-live="polite"></div>
+              </div>
+              <div class="form-item">
+                <label for="surname" id="surname-label">Last Name <span class="required">*</span></label>
+                <input
+                  type="text"
+                  id="surname"
+                  name="surname"
+                  aria-labelledby="surname-label"
+                  aria-required="true"
+                  required />
+                <div class="error-message" id="surname-error" aria-live="polite"></div>
+              </div>
+            </div>
+            <div class="form-item">
+              <label for="email" id="email-label">Email Address <span class="required">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                aria-labelledby="email-label"
+                aria-required="true"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+              <div class="error-message" id="email-error" aria-live="polite"></div>
+            </div>
+            <div class="form-item">
+              <label for="phone" id="phone-label">Phone Number</label>
+              <input type="tel" id="phone" name="phone" aria-labelledby="phone-label" pattern="[0-9+\s()-]{7,}" />
+              <div class="error-message" id="phone-error" aria-live="polite"></div>
+            </div>
+            <div class="form-item">
+              <label for="message" id="message-label">Message</label>
+              <textarea id="message" name="message" rows="5" aria-labelledby="message-label"></textarea>
+              <div class="error-message" id="message-error" aria-live="polite"></div>
+            </div>
+            <div class="form-controls">
+              <button type="submit" class="button">Send Message</button>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
     <!---- Footer ---->

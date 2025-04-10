@@ -12,7 +12,7 @@ body {
   font-family: $ff-base;
   font-weight: $fw-regular;
   font-size: $fs-regular;
-  line-height: 1.6;
+  line-height: 1.5;
   color: $text-body;
 }
 
@@ -56,8 +56,24 @@ h4,
   font-weight: 700;
 }
 
+.fs-tiny {
+  font-size: $fs-tiny;
+}
+
 .fs-small {
   font-size: $fs-small;
+}
+
+.fs-regular {
+  font-size: $fs-regular;
+}
+
+.fs-medium {
+  font-size: $fs-medium;
+}
+
+.fs-large {
+  font-size: $fs-large;
 }
 
 a {

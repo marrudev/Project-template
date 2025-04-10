@@ -136,11 +136,11 @@ body {
   font-family: "Roboto", system-ui, sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.5;
   color: #0b1f3a;
 }
 
-
+h1,
 h2,
 h3,
 .h2,
@@ -148,6 +148,13 @@ h3,
 .h3 {
   line-height: 1.2;
   color: #0b1f3a;
+}
+
+h1,
+.h1 {
+  font-family: "Roboto", serif;
+  font-size: clamp(1.5rem, 0.5909rem + 4.5455vw, 4rem);
+  font-weight: 700;
 }
 
 h2,
@@ -186,12 +193,16 @@ a:is(:hover, :focus) {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #ff0028;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #ffffff;
+  background-color: #ff0028;
   font-family: "Roboto", system-ui, sans-serif;
   font-size: 1rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1;
+  text-box-trim: trim-both;
   padding: 1rem 1.5rem;
   border: none;
   cursor: pointer;
@@ -286,8 +297,45 @@ footer .footer-logo,
 }
 .form,
 form {
+  --form-gap: 1rem;
   display: grid;
-  gap: 1rem;
+  gap: var(--form-gap);
+}
+.form .form-items-row,
+form .form-items-row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: var(--form-gap);
+}
+.form .form-items-row .form-item,
+form .form-items-row .form-item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  min-width: min(320px, 100%);
+}
+.form .form-item,
+form .form-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+}
+.form .required,
+form .required {
+  color: #ff0028;
 }
 
 label,
@@ -672,9 +720,10 @@ article > :first-child,
 .article > :first-child {
   margin-top: 0;
 }
-
+article h1,
 article h2,
 article h3,
+.article h1,
 .article h2,
 .article h3 {
   text-align: start;
@@ -731,6 +780,9 @@ article ul li::marker,
 }
 
 .flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -749,6 +801,11 @@ article ul li::marker,
 
 .gap-8 {
   gap: 2rem;
+}
+
+.section.padding-both,
+section.padding-both {
+  padding: clamp(3rem, 1.5714rem + 4.5714vw, 5rem) 0;
 }
 
 .w-full {
