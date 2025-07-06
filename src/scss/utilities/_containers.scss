@@ -8,19 +8,23 @@
   padding-inline: $padding-site;
 }
 
-.container.--narrow {
-  --container-max-width: #{$container-max-width-narrow};
+.container.max-w-small {
+  --container-max-width: #{$container-max-width-small};
 }
 
-.container.--article {
-  --max-width: #{$container-max-width-article};
+.container.max-w-article {
+  --container-max-width: #{$container-max-width-article};
 }
 
-.container.--wide {
-  --max-width: 100%;
+.container.max-w-static-page {
+  --container-max-width: #{$container-max-width-static-page};
 }
 
-.container.--full {
+.container.max-w-100 {
+  --container-max-width: 100%;
+}
+
+.container.max-w-full {
   width: 100%;
   padding-inline: 0;
 }

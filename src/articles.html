@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include('./components/head-1.html') @@include('./components/fav.html')
+    <title>Website Title</title>
+    @@include('./components/head-2.html') @@include('./components/head-3.html')
+  </head>
+  <body>
+    @@include('./components/header.html')
+    <main id="main-content">
+      <div class="page-header">
+        <div class="container"><h1>Novinky</h1></div>
+        <picture>
+          <source media="(min-width: 1200px)" srcset="./images/content/img1.webp" />
+          <source media="(min-width: 992px)" srcset="" />
+          <source media="(min-width: 768px)" srcset="" />
+          <source media="(min-width: 576px)" srcset="" />
+          <img class="page-header_img" src="./images/content/img1.webp" alt="" loading="lazy" decoding="async" />
+        </picture>
+      </div>
+      <section class="padding-top">
+        <div class="container">
+          <form action="" method="" class="filters-wrapper">
+            <select name="sezona" id="sezona-select">
+              <option value="" selected="">Sezona</option>
+              <option value="all">Všechny</option>
+              <option value="2024">2024/25</option>
+              <option value="2024">2023/24</option>
+              <option value="2023">2022/23</option>
+              <option value="2022">2021/22</option>
+            </select>
+            <select name="kategorie" id="kategorie-select">
+              <option value="" selected="">Kategorie</option>
+              <option value="all">Všechny</option>
+              <option value="2024">Kategorie 1</option>
+              <option value="2024">Kategorie 2</option>
+              <option value="2023">Kategorie 3</option>
+              <option value="2022">Kategorie 4</option>
+            </select>
+            <div class="search-wrapper">
+              <input type="search" id="archiv-search" name="archiv-search" placeholder="Hledat..." />
+              <img class="search-icon" src="./images/icons/search.svg" alt="" />
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="padding-bottom">
+        <div class="container">
+          <div class="alert-box">Pro zvolené parametry nebyly nalezeny žádné výsledky</div>
+          <ul class="nav-list grid-even-col col-4 mb-20" role="grid" aria-label="Seznam článků">
+            @@include('./components/card-article.html') @@include('./components/card-article.html')
+            @@include('./components/card-article.html') @@include('./components/card-article.html')
+            @@include('./components/card-article.html') @@include('./components/card-article.html')
+            @@include('./components/card-article.html') @@include('./components/card-article.html')
+          </ul>
+          @@include('./components/pagination.html')
+        </div>
+      </section>
+    </main>
+    @@include('./components/footer.html') @@include('./components/scripts.html')
+  </body>
+</html>

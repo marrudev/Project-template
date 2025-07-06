@@ -1,0 +1,116 @@
+<!-- Secondary navigation -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Initialize all lists with .nav-list class
+    const navLists = document.querySelectorAll('.nav-list');
+
+    navLists.forEach(initializeKeyboardNavigation);
+
+    function initializeKeyboardNavigation(listElement) {
+      const navItems = listElement.querySelectorAll('a[role="menuitem"], a[role="gridcell"]');
+      let currentIndex = 0;
+
+      // Set initial focus - prioritize current page or first item
+      const currentPageItem = listElement.querySelector('a[aria-current="page"]');
+      if (currentPageItem) {
+        currentIndex = Array.from(navItems).indexOf(currentPageItem);
+      }
+      setActiveItem(currentIndex);
+
+      function setActiveItem(index) {
+        // Remove tabindex from all items
+        navItems.forEach(item => item.setAttribute('tabindex', '-1'));
+        // Set tabindex="0" on the active item
+        navItems[index].setAttribute('tabindex', '0');
+        currentIndex = index;
+      }
+
+      function getGridDimensions() {
+        if (!navItems.length) return {cols: 1, rows: 1};
+
+        const firstItem = navItems[0];
+        const containerRect = listElement.getBoundingClientRect();
+        const itemRect = firstItem.getBoundingClientRect();
+
+        const cols = Math.round(containerRect.width / itemRect.width);
+        const rows = Math.ceil(navItems.length / cols);
+
+        return {cols, rows};
+      }
+
+      // Handle keyboard navigation
+      listElement.addEventListener('keydown', function (e) {
+        let targetIndex;
+        const {cols} = getGridDimensions();
+        const isGrid =
+          listElement.hasAttribute('role') &&
+          (listElement.getAttribute('role') === 'grid' || navItems[0]?.getAttribute('role') === 'gridcell');
+
+        switch (e.key) {
+          case 'ArrowRight':
+            e.preventDefault();
+            targetIndex = (currentIndex + 1) % navItems.length;
+            setActiveItem(targetIndex);
+            navItems[targetIndex].focus();
+            break;
+
+          case 'ArrowLeft':
+            e.preventDefault();
+            targetIndex = (currentIndex - 1 + navItems.length) % navItems.length;
+            setActiveItem(targetIndex);
+            navItems[targetIndex].focus();
+            break;
+
+          case 'ArrowDown':
+            if (isGrid) {
+              e.preventDefault();
+              targetIndex = Math.min(currentIndex + cols, navItems.length - 1);
+              setActiveItem(targetIndex);
+              navItems[targetIndex].focus();
+            }
+            break;
+
+          case 'ArrowUp':
+            if (isGrid) {
+              e.preventDefault();
+              targetIndex = Math.max(currentIndex - cols, 0);
+              setActiveItem(targetIndex);
+              navItems[targetIndex].focus();
+            }
+            break;
+
+          case 'Home':
+            e.preventDefault();
+            setActiveItem(0);
+            navItems[0].focus();
+            break;
+
+          case 'End':
+            e.preventDefault();
+            targetIndex = navItems.length - 1;
+            setActiveItem(targetIndex);
+            navItems[targetIndex].focus();
+            break;
+
+          case 'Enter':
+          case ' ':
+            e.preventDefault();
+            navItems[currentIndex].click();
+            break;
+        }
+      });
+
+      // Update currentIndex when clicking or focusing items
+      navItems.forEach((item, index) => {
+        item.addEventListener('click', function () {
+          setActiveItem(index);
+        });
+
+        item.addEventListener('focus', function () {
+          currentIndex = index;
+          setActiveItem(index);
+        });
+      });
+    }
+  });
+</script>

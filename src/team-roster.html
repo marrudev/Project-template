@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include('./components/head-1.html') @@include('./components/fav.html')
+    <title>Webiste title</title>
+    @@include('./components/head-2.html') @@include('./components/head-3.html')
+  </head>
+  <body>
+    @@include('./components/header.html')
+    <main id="main-content">
+      <div class="page-header">
+        <div class="container">
+          <h1><span class="fc-accent">A tým</span> Soupiska</h1>
+        </div>
+      </div>
+      <!-- Team Navigation -->
+      <section class="padding-both">
+        <div class="container">
+          <div class="nav-scrollable-wrapper hide-scrollbar">
+            <nav class="team-navigation" aria-label="Týmový rozcestník" role="navigation">
+              <ul class="nav-secondary nav-list" role="menubar">
+                <li role="none">
+                  <a class="active" href="./team-roster.html" role="menuitem" tabindex="0" aria-current="page">
+                    Soupiska
+                  </a>
+                </li>
+                <li role="none">
+                  <a href="./team-roster.html#staff" role="menuitem" tabindex="-1">Realizační tým </a>
+                </li>
+                <li role="none">
+                  <a href="./team-matches.html" role="menuitem" tabindex="-1">Zápasy </a>
+                </li>
+                <li role="none">
+                  <a href="./team-statistics.html" role="menuitem" tabindex="-1">Statistiky</a>
+                </li>
+                <li role="none">
+                  <a href="./team-table.html" role="menuitem" tabindex="-1">Tabulka </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <!-- Filters -->
+      <section>
+        <div class="container">
+          <div class="filters-wrapper">
+            <select name="sezona" id="sezona-select">
+              <option value="" selected="">Sezona</option>
+              <option value="all">Všechny</option>
+              <option value="2024">2024/25</option>
+              <option value="2024">2023/24</option>
+              <option value="2023">2022/23</option>
+              <option value="2022">2021/22</option>
+            </select>
+          </div>
+        </div>
+      </section>
+      <!-- Content-->
+      <section class="padding-bottom">
+        <div class="container">
+          <h2>Brankáři</h2>
+          <ul class="nav-list grid-even-col col-4" role="grid" aria-label="Seznam brankářů">
+            @@include('./components/card-player.html') @@include('./components/card-player.html')
+            @@include('./components/card-player.html')
+          </ul>
+        </div>
+      </section>
+      <section class="padding-bottom">
+        <div class="container">
+          <h2>Obránci</h2>
+          <ul class="nav-list grid-even-col col-4" role="grid" aria-label="Seznam obránců">
+            @@include('./components/card-player.html') @@include('./components/card-player.html')
+            @@include('./components/card-player.html')
+          </ul>
+        </div>
+      </section>
+      <section class="padding-bottom">
+        <div class="container">
+          <h2>Ůtočníci</h2>
+          <ul class="nav-list grid-even-col col-4" role="grid" aria-label="Seznam útočníků">
+            @@include('./components/card-player.html') @@include('./components/card-player.html')
+            @@include('./components/card-player.html')
+          </ul>
+        </div>
+      </section>
+      <section class="padding-bottom">
+        <div class="container">
+          <h2>Realizační tým</h2>
+          <ul class="nav-list grid-even-col col-4" role="grid" aria-label="Realizační tým">
+            @@include('./components/card-player.html') @@include('./components/card-player.html')
+            @@include('./components/card-player.html')
+          </ul>
+        </div>
+      </section>
+    </main>
+    @@include('./components/footer.html') @@include('./components/scripts.html')
+  </body>
+</html>

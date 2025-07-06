@@ -2,84 +2,124 @@
 
 /* purgecss start ignore */
 
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
 .form,
 form {
   --form-gap: 1rem;
-
   display: grid;
   gap: var(--form-gap);
+}
 
-  .form-items-row {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--form-gap);
+.form-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--form-gap);
 
-    .form-item {
-      flex-grow: 1;
-      min-width: min(320px, 100%);
-    }
-  }
-
-  .form-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-
-  .required {
-    color: $accent;
+  @media (width < 800px) {
+    grid-template-columns: 1fr;
   }
 }
 
-label,
-.form-label {
-  font-size: 0.75rem;
-  font-family: $ff-accent;
-  margin-bottom: 0.5rem;
-}
-
-input:not(.button, select),
-textarea {
-  width: 100%;
-  flex-grow: 1;
-  font-size: $fs-regular;
-  color: $primary;
-  background-color: $white;
-  padding: 0.75rem 1rem;
-  border: solid 1px $stroke;
-  outline: none;
-  resize: none;
+.form-item {
+  display: grid;
+  gap: 0.25rem;
 }
 
 ::placeholder {
   color: $text-body;
 }
 
-.select {
-  display: grid;
-  grid-template-areas: 'select';
-  align-items: center;
+label,
+.form-label {
+  font-size: 0.875rem;
+  font-family: $ff-base;
+}
+
+input:not(.button, select),
+textarea {
   flex-grow: 1;
-  position: relative;
-  border: 1px solid $stroke;
-  padding: 0.75rem 1rem;
+  font-size: $fs-regular;
+  color: $primary;
+  background-color: transparent;
+  padding: 1rem 1.5rem;
+  border: solid 1px $border-primary;
+  border-radius: 1rem;
+  outline: none;
+  resize: none;
+}
+
+// Checkbox
+
+input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
   cursor: pointer;
+}
 
-  select,
-  &::after {
-    grid-area: select;
+// Radio
+
+input[type='radio'] {
+  accent-color: $accent;
+}
+
+// Search
+
+.search-wrapper {
+  position: relative;
+  max-width: 15rem;
+
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
   }
+}
 
-  // Custom arrow
-  &::after {
-    content: '';
-    justify-self: end;
-    width: 0.6em;
-    height: 0.45em;
-    background-color: $text-body;
-    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+input[type='search'] {
+  height: 100%;
+  width: 100%;
+
+  &::placeholder {
+    font-family: $ff-accent;
+    font-size: 1.25rem;
+    line-height: 1.1;
+    color: $accent;
+  }
+}
+
+// Select
+
+select {
+  appearance: none;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  font-family: $ff-base;
+  font-size: 1.25rem;
+  line-height: 1.1;
+  color: $accent;
+  padding: 1rem 3rem 1rem 1.5rem;
+  border: 1px solid $border-primary;
+  border-radius: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: border-color 0.3s;
+
+  background-image: url('../images/icons/arrow-down.svg');
+  background-repeat: no-repeat;
+  background-position: right 1.5rem center;
+  background-size: 0.675rem;
+
+  option {
+    background-color: $bg-secondary;
+    color: $text-body;
   }
 }
 
@@ -87,46 +127,4 @@ input:focus-within,
 textarea:focus-within {
   border: 1px solid $primary;
 }
-
-// Checkbox
-input[type='checkbox'] {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-/* Create a custom checkbox */
-.custom-checkbox {
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  background-color: $white;
-  border: 2px solid $accent;
-  border-radius: 0.5rem;
-  position: relative;
-}
-
-/* Show the checkmark when the checkbox is checked */
-input[type='checkbox']:checked {
-  background-color: $accent;
-}
-
-/* Change background color when the checkbox is checked */
-input[type='checkbox']:checked + .custom-checkbox {
-  background-color: $accent;
-}
-
-/* Style the label */
-.checkbox-label {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.checkbox-label span {
-  margin-left: 0.5rem;
-  font-family: $ff-base;
-  font-size: 1rem;
-}
-
 /* purgecss end ignore */

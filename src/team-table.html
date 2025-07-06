@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include('./components/head-1.html') @@include('./components/fav.html')
+    <title>FC Hradec Králové</title>
+    @@include('./components/head-2.html') @@include('./components/head-3.html')
+  </head>
+  <body>
+    @@include('./components/header.html')
+    <main id="main-content">
+      <div class="page-header">
+        <div class="container">
+          <h1><span class="fc-accent">A tým</span> tabulka</h1>
+        </div>
+      </div>
+      <!-- Team Navigation -->
+      <section class="padding-both">
+        <div class="container">
+          <div class="nav-scrollable-wrapper hide-scrollbar">
+            <nav class="team-navigation" aria-label="Týmový rozcestník" role="navigation">
+              <ul class="nav-secondary nav-list" role="menubar">
+                <li role="none">
+                  <a href="./team-roster.html" role="menuitem" tabindex="0" aria-current="page"> Soupiska </a>
+                </li>
+                <li role="none">
+                  <a href="./team-roster.html#staff" role="menuitem" tabindex="-1">Realizační tým </a>
+                </li>
+                <li role="none">
+                  <a href="./team-matches.html" role="menuitem" tabindex="-1">Zápasy </a>
+                </li>
+                <li role="none">
+                  <a href="./team-statistics.html" role="menuitem" tabindex="-1">Statistiky</a>
+                </li>
+                <li role="none">
+                  <a class="active" href="./team-table.html" role="menuitem" tabindex="-1">Tabulka </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <!-- Filters -->
+      <section>
+        <div class="container">
+          <div class="filters-wrapper">
+            <select name="sezona" id="sezona-select">
+              <option value="" selected="">Sezona</option>
+              <option value="all">Všechny</option>
+              <option value="2024">2024/25</option>
+              <option value="2024">2023/24</option>
+              <option value="2023">2022/23</option>
+              <option value="2022">2021/22</option>
+            </select>
+          </div>
+        </div>
+      </section>
+      <!-- Content -->
+      <section class="padding-bottom">
+        <div class="container">
+          <div class="table-wrapper custom-scrollbar">
+            <table class="table table-statistics">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th class="cell-100 text-left">Tým</th>
+                  <th>Z</th>
+                  <th>V</th>
+                  <th>R</th>
+                  <th>P</th>
+                  <th>B</th>
+                  <th>S</th>
+                  <th>RG</th>
+                  <th>+/-</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>
+                    <div class="table_team">
+                      <img class="table_team-logo" src="./images/logos/teams/bohemians.png" alt="" />Název Týmu
+                    </div>
+                  </td>
+                  <td>123</td>
+                  <td>23</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>1</td>
+                  <td>4</td>
+                  <td>53</td>
+                </tr>
+                <tr>
+                  <td>2.</td>
+                  <td>
+                    <div class="table_team">
+                      <img class="table_team-logo" src="./images/logos/teams/sparta.png" alt="" />Sparta Praha
+                    </div>
+                  </td>
+                  <td>123</td>
+                  <td>23</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>1</td>
+                  <td>4</td>
+                  <td>53</td>
+                </tr>
+                <tr class="active">
+                  <td>3.</td>
+                  <td>
+                    <div class="table_team">
+                      <img class="table_team-logo" src="./images/logos/teams/bohemians.png" alt="" />FC Hradec Králové
+                    </div>
+                  </td>
+                  <td>123</td>
+                  <td>23</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>1</td>
+                  <td>4</td>
+                  <td>53</td>
+                </tr>
+                <tr>
+                  <td>4.</td>
+                  <td>
+                    <div class="table_team">
+                      <img class="table_team-logo" src="./images/logos/teams/bohemians.png" alt="" />Název Týmu
+                    </div>
+                  </td>
+                  <td>123</td>
+                  <td>23</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>1</td>
+                  <td>4</td>
+                  <td>53</td>
+                </tr>
+                <tr>
+                  <td>5.</td>
+                  <td>
+                    <div class="table_team">
+                      <img class="table_team-logo" src="./images/logos/teams/bohemians.png" alt="" />Název Týmu
+                    </div>
+                  </td>
+                  <td>123</td>
+                  <td>23</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>1</td>
+                  <td>4</td>
+                  <td>53</td>
+                </tr>
+                <tr>
+                  <td>6.</td>
+                  <td>
+                    <div class="table_team">
+                      <img class="table_team-logo" src="./images/logos/teams/sparta.png" alt="" />Název Týmu
+                    </div>
+                  </td>
+                  <td>123</td>
+                  <td>23</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>1</td>
+                  <td>4</td>
+                  <td>53</td>
+                </tr>
+                <tr>
+                  <td>7.</td>
+                  <td>
+                    <div class="table_team">
+                      <img class="table_team-logo" src="./images/logos/teams/bohemians.png" alt="" />Název Týmu
+                    </div>
+                  </td>
+                  <td>123</td>
+                  <td>23</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>1</td>
+                  <td>4</td>
+                  <td>53</td>
+                </tr>
+                <tr>
+                  <td>8.</td>
+                  <td>
+                    <div class="table_team">
+                      <img class="table_team-logo" src="./images/logos/teams/sparta.png" alt="" />Název Týmu
+                    </div>
+                  </td>
+                  <td>123</td>
+                  <td>23</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>1</td>
+                  <td>4</td>
+                  <td>53</td>
+                </tr>
+                <tr>
+                  <td>9.</td>
+                  <td>
+                    <div class="table_team">
+                      <img class="table_team-logo" src="./images/logos/teams/bohemians.png" alt="" />Název Týmu
+                    </div>
+                  </td>
+                  <td>123</td>
+                  <td>23</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>1</td>
+                  <td>4</td>
+                  <td>53</td>
+                </tr>
+                <tr>
+                  <td>10.</td>
+                  <td>
+                    <div class="table_team">
+                      <img class="table_team-logo" src="./images/logos/teams/sparta.png" alt="" />Název Týmu
+                    </div>
+                  </td>
+                  <td>123</td>
+                  <td>23</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>1</td>
+                  <td>4</td>
+                  <td>53</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('./components/footer.html') @@include('./components/scripts.html')
+  </body>
+</html>

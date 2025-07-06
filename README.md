@@ -13,3 +13,7 @@ Run GULP
 ```bash
 gulp
 ```
+
+### Autor
+
+Martin Marušák

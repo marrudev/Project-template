@@ -1,31 +1,65 @@
+<!-- Skip to Content Link -->
+<a href="#main-content" class="skip-to-content button">Přeskočit na hlavní obsah</a>
+
 <!---- Main navigation ---->
 <header class="header-nav">
   <div class="container">
-    <nav class="main-nav">
-      <a href="./index.html">
-        <img class="nav-logo" src="./images/nav-logo.png" alt="Company Logo" />
+    <nav class="main-nav" role="navigation" aria-label="Hlavní navigace">
+      <a href="./index.html" aria-label="Přejít na hlavní stranu">
+        <img class="nav-logo" src="./images/logos/teams/hradec.png" alt="Klubové logo" />
       </a>
-      <div class="menu-btn"><div class="menu-btn-burger"></div></div>
+
+      <button class="menu-btn" tabindex="0" role="button" aria-label="Otevřít menu">
+        <div class="menu-btn-burger"></div>
+      </button>
+
       <div class="nav-menu">
-        <ul class="nav-menu-list">
-          <li>
-            <a href="./o-turnaji.html">O nás</a>
-            <img src="./images/icons/arrow-right.png" alt="" />
+        <ul class="nav-menu_list">
+          <li class="nav-menu_item">
+            <a href="#" class="nav-menu_link">Klub</a>
           </li>
-          <li><a href="./zapasy.html">Zápasy</a><img src="./images/icons/arrow-right.png" alt="" /></li>
-          <li><a href="./novinky.html">Novinky</a><img src="./images/icons/arrow-right.png" alt="" /></li>
-          <li><a href="./tymy.html">Týmy</a><img src="./images/icons/arrow-right.png" alt="" /></li>
-          <li>
-            <a href="./historie.html">Historie</a>
-            <img src="./images/icons/arrow-right.png" alt="" />
+          <li class="nav-menu_item has-submenu">
+            <div class="nav-menu_link-wrapper">
+              <a href="#" class="nav-menu_link" aria-haspopup="true">Týmy</a>
+              <button class="dropdown-toggle" aria-expanded="false"></button>
+            </div>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a href="#" class="nav-submenu_link">A-tým</a>
+              </li>
+              <li>
+                <a href="#" class="nav-submenu_link">Ženy</a>
+              </li>
+              <li>
+                <a href="#" class="nav-submenu_link">Mládež</a>
+              </li>
+            </ul>
           </li>
-          <li>
-            <a href="./galerie.html">Fotogalerie</a>
-            <img src="./images/icons/arrow-right.png" alt="" />
+          <li class="nav-menu_item">
+            <a href="#" class="nav-menu_link">Novinky</a>
           </li>
-          <li>
-            <a href="./kontakty.html">Kontakty</a>
-            <img src="./images/icons/arrow-right.png" alt="" />
+          <li class="nav-menu_item has-submenu">
+            <div class="nav-menu_link-wrapper">
+              <a href="#" class="nav-menu_link" aria-haspopup="true">Týmy</a>
+              <button class="dropdown-toggle" aria-expanded="false"></button>
+            </div>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a href="#" class="nav-submenu_link">A-tým</a>
+              </li>
+              <li>
+                <a href="#" class="nav-submenu_link">Ženy</a>
+              </li>
+              <li>
+                <a href="#" class="nav-submenu_link">Mládež</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-menu_item">
+            <a href="#" class="nav-menu_link">Fanzóna</a>
+          </li>
+          <li class="nav-menu_item">
+            <a href="#" class="nav-menu_link">Kontakty</a>
           </li>
         </ul>
       </div>
@@ -33,4 +67,4 @@
   </div>
 </header>
 
-<script async src="./js/main-nav.js"></script>
+<script defer src="./js/main-nav.js"></script>

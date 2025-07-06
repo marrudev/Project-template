@@ -2,8 +2,8 @@
 @use 'sizes' as *;
 
 //Typography
-$ff-base: 'Roboto', system-ui, sans-serif;
-$ff-accent: 'Roboto', serif;
+$ff-base: 'Inter', system-ui, sans-serif;
+$ff-accent: 'Bison', serif;
 
 $fw-thin: 100;
 $fw-light: 300;
@@ -34,8 +34,9 @@ $padding-section: clamp(3rem, 1.5714rem + 4.5714vw, 5rem);
 
 // Containers
 $container-max-width: 1400px;
-$container-max-width-narrow: 900px;
+$container-max-width-small: 900px;
 $container-max-width-article: 900px;
+$container-max-width-static-page: 1100px;
 
 // Breakpoints
 $medium-small: 30rem;
@@ -47,7 +48,13 @@ $medium-extra-large: 75rem;
 $transition: all 300ms ease-in-out;
 
 // Border radius
-$border-radius-sm: 0.25rem;
-$border-radius: 0.5rem;
-$border-radius-md: 1rem;
-$border-radius-lg: 2.5rem;
+$border-radius-xxs: clamp(0.25rem, calc(0vw + 0.25rem), 0.25rem);
+$border-radius-xs: clamp(0.38rem, calc(-0.19vw + 0.54rem), 0.5rem);
+$border-radius-s: clamp(0.63rem, calc(-0.19vw + 0.79rem), 0.75rem);
+$border-radius-r: clamp(0.75rem, calc(-0.37vw + 1.07rem), 1rem);
+$border-radius-m: clamp(1.25rem, calc(-0.37vw + 1.57rem), 1.5rem);
+$border-radius-l: clamp(1.63rem, calc(-0.56vw + 2.11rem), 2rem);
+$border-radius-xl: clamp(2rem, calc(-0.74vw + 2.65rem), 2.5rem);
+
+// Main nav height
+$nav-height: 80px;

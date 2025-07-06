@@ -1,27 +1,30 @@
 const tabsContainer = document.querySelector('.tabs-container');
 const tabsList = tabsContainer.querySelector('.tabs-list');
 const tabButtons = tabsList.querySelectorAll('.tab-button');
-const tabPanels = tabsContainer.querySelectorAll('.tabs__panels > div');
+const tabPanels = tabsContainer.querySelectorAll('.tabs_panels > div');
 
+// Set roles and attributes
 tabsList.setAttribute('role', 'tablist');
-
-for (const listitem of tabsList.querySelectorAll('li')) {
-  listitem.setAttribute('role', 'presentation');
-}
+tabsList.querySelectorAll('li').forEach(li => li.setAttribute('role', 'presentation'));
 
 tabButtons.forEach((tab, index) => {
+  const targetId = tab.getAttribute('data-target');
+  const panel = tabsContainer.querySelector(targetId);
+
   tab.setAttribute('role', 'tab');
   tab.setAttribute('tabindex', index === 0 ? '0' : '-1');
-  tabPanels[index].setAttribute('role', 'tabpanel');
-  tabPanels[index].setAttribute('tabindex', '0');
-  tabPanels[index].setAttribute('hidden', 'true');
+  tab.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
 
-  if (index === 0) {
-    tab.setAttribute('aria-selected', 'true');
-    tabPanels[index].removeAttribute('hidden');
+  panel.setAttribute('role', 'tabpanel');
+  panel.setAttribute('tabindex', '0');
+  panel.setAttribute('aria-labelledby', tab.id);
+
+  if (index !== 0) {
+    panel.setAttribute('hidden', 'true');
   }
 });
 
+// Handle tab switching on click
 tabsContainer.addEventListener('click', e => {
   const clickedTab = e.target.closest('.tab-button');
   if (!clickedTab) return;
@@ -29,13 +32,17 @@ tabsContainer.addEventListener('click', e => {
   switchTab(clickedTab);
 });
 
+// Handle keyboard navigation
 tabsContainer.addEventListener('keydown', e => {
+  const currentTab = document.activeElement;
+  const currentIndex = Array.from(tabButtons).indexOf(currentTab);
+
   switch (e.key) {
     case 'ArrowLeft':
-      move(-1);
+      moveTo(currentIndex - 1);
       break;
     case 'ArrowRight':
-      move(1);
+      moveTo(currentIndex + 1);
       break;
     case 'Home':
       e.preventDefault();
@@ -48,44 +55,40 @@ tabsContainer.addEventListener('keydown', e => {
   }
 });
 
-function move(direction) {
-  const currentTab = document.activeElement;
-  const currentIndex = Array.from(tabButtons).indexOf(currentTab);
-  const newIndex = (currentIndex + direction + tabButtons.length) % tabButtons.length;
+function moveTo(index) {
+  const newIndex = (index + tabButtons.length) % tabButtons.length;
   switchTab(tabButtons[newIndex]);
 }
 
 function switchTab(newTab) {
-  const activePanelId = newTab.getAttribute('href');
-  const activePanel = tabsContainer.querySelector(activePanelId);
+  const targetId = newTab.getAttribute('data-target');
+  const newPanel = tabsContainer.querySelector(targetId);
 
-  tabButtons.forEach(button => {
-    button.setAttribute('aria-selected', 'false');
-    button.setAttribute('tabindex', '-1');
+  tabButtons.forEach(tab => {
+    tab.setAttribute('aria-selected', 'false');
+    tab.setAttribute('tabindex', '-1');
   });
 
   tabPanels.forEach(panel => {
     panel.setAttribute('hidden', 'true');
   });
 
-  activePanel.removeAttribute('hidden');
   newTab.setAttribute('aria-selected', 'true');
   newTab.setAttribute('tabindex', '0');
   newTab.focus();
+  newPanel.removeAttribute('hidden');
 }
 
-// Function to set the active tab based on the "tab" URL parameter
+// Activate tab from ?tab=2 parameter
 function activateTabFromURLParam() {
   const urlParams = new URLSearchParams(window.location.search);
   const tabParam = urlParams.get('tab');
-
   if (tabParam) {
-    const tabIndex = parseInt(tabParam) - 1; // Convert tabParam to zero-based index
+    const tabIndex = parseInt(tabParam, 10) - 1;
     if (tabIndex >= 0 && tabIndex < tabButtons.length) {
-      switchTab(tabButtons[tabIndex]); // Activate the specified tab
+      switchTab(tabButtons[tabIndex]);
     }
   }
 }
 
-// Call the function to activate the tab based on the URL parameter when the page loads
 window.addEventListener('load', activateTabFromURLParam);

@@ -4,36 +4,80 @@
 
 footer,
 .footer {
-  background-color: $accent;
-  color: $white;
-  padding: 5rem 0;
+  position: relative;
+  background-color: $bg-secondary;
+  color: $text-body;
+  padding: 5rem 0 3rem 0;
+  font-size: $fs-small;
 
   a {
-    color: $white;
+    color: $text-body;
+
+    &:is(:hover, :focus) {
+      text-decoration: none;
+      color: $white;
+    }
   }
 
   .divider-line {
     height: 1px;
     width: 100%;
-    background-color: #ffffff50;
+    background-color: $border-primary;
   }
 
-  .nav-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  .divider-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 
-    ul {
+  .socials-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .footer-nav-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 2.5rem;
+    row-gap: 3rem;
+
+    .footer-col {
       display: flex;
-      flex-direction: row;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2.5rem;
-      row-gap: 1rem;
+      flex-direction: column;
+    }
+
+    .footer-list {
+      display: grid;
+      gap: 0.75rem;
       list-style: none;
       padding: 0;
       margin: 0;
+    }
+
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(3, 1fr);
+
+      .footer-col.is-last {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(2, 1fr);
+
+      .footer-col.is-last {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 380px) {
+      grid-template-columns: repeat(1, 1fr);
+
+      .footer-col.is-last {
+        grid-column: span 1;
+      }
     }
   }
 

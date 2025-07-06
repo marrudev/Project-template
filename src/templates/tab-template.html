@@ -1,41 +1,50 @@
 <!-- Tabs -->
 <div class="tabs-container w-full">
-  <ul aria-labelledby="" class="tabs-list">
-    <li>
-      <a id="tab-1-link" class="button tab-button" href="#tab-1"> 2023</a>
+  <ul class="tabs-list" role="tablist">
+    <li role="presentation">
+      <button
+        id="tab-1"
+        class="button tab-button"
+        role="tab"
+        aria-selected="true"
+        aria-controls="panel-1"
+        data-target="#panel-1"
+        tabindex="0">
+        2023
+      </button>
     </li>
-    <li>
-      <a id="tab-2-link" class="button tab-button" href="#tab-2">2022</a>
+    <li role="presentation">
+      <button
+        id="tab-2"
+        class="button tab-button"
+        role="tab"
+        aria-selected="false"
+        aria-controls="panel-2"
+        data-target="#panel-2"
+        tabindex="-1">
+        2022
+      </button>
     </li>
   </ul>
-  <div class="tabs__panels">
-    <div id="tab-1" aria-labelledby="tab-1">
-      <div class="tab-content">
-        <article>
-          <h2>Header Tab 1</h2>
-          <h3>Header 2</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam rhoncus aliquam metus. Phasellus faucibus
-            molestie nisl. Suspendisse nisl. Phasellus rhoncus. Aenean placerat. Pellentesque pretium lectus id turpis.
-            Nullam sit amet magna in magna gravida vehicula. In dapibus augue non sapien. Aenean fermentum risus id
-            tortor. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est.
-          </p>
-        </article>
-      </div>
+  <div class="tabs_panels">
+    <!-- Panel 1 -->
+    <div id="panel-1" class="tab-content" role="tabpanel" aria-labelledby="tab-1" tabindex="0">
+      <article>
+        <h2>Header Tab 1</h2>
+        <h3>Header 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam rhoncus aliquam metus. ...</p>
+      </article>
     </div>
-    <div id="tab-2" aria-labelledby="tab-2">
-      <div class="tab-content">
-        <article>
-          <h2>Header Tab 2</h2>
-          <h3>Header 2</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam rhoncus aliquam metus. Phasellus faucibus
-            molestie nisl. Suspendisse nisl. Phasellus rhoncus.
-          </p>
-        </article>
-      </div>
+    <!-- Panel 2 -->
+    <div id="panel-2" class="tab-content" role="tabpanel" aria-labelledby="tab-2" tabindex="0" hidden>
+      <article>
+        <h2>Header Tab 2</h2>
+        <h3>Header 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam rhoncus aliquam metus. ...</p>
+      </article>
     </div>
   </div>
 </div>
-<!-- Load script -->
+
+<!-- Load tabs script -->
 <script async src="./js/tabs.js"></script>

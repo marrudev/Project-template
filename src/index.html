@@ -1,74 +1,73 @@
 <!doctype html>
 <html lang="en">
   <head>
-    @@include('./components/head-1.html')
+    @@include('./components/head-1.html') @@include('./components/fav.html')
     <title>Webiste title</title>
-    @@include('./components/head-2.html')
-    <!-- SEO, meta značky, ikony, Open Graph… -->
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta property="og:title" itemprop="name" content="" />
-    <meta property="og:description" itemprop="description" content="XXXXX" />
-    <meta property="og:image" content="URL_to_img" />
-    <meta property="og:url" content="" />
-    <meta property="og:type" content="Webiste" />
-    <!-- HEAD 3 (Pokud má web backend) -->
-    @@include('./components/head-3.html') @@include('./components/fav.html')
+    @@include('./components/head-2.html') @@include('./components/head-3.html')
   </head>
   <body>
     @@include('./components/header.html')
     <!---- Section ---->
-    <main>
+    <main id="main-content">
       <section class="padding-both">
         <div class="container">
           <h1>Hello world</h1>
           <p>Lorem ipsum dolor sit amet</p>
           <a href="" class="button">Hello world</a>
-          <form id="contact-form" action="/submit-form" method="post" novalidate>
-            <div class="form-items-row">
-              <div class="form-item">
-                <label for="name" id="name-label">First Name <span class="required">*</span></label>
-                <input type="text" id="name" name="name" aria-labelledby="name-label" aria-required="true" required />
-                <div class="error-message" id="name-error" aria-live="polite"></div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <!-- Tabs -->
+          <div class="tabs-container w-full">
+            <ul class="tabs-list" role="tablist">
+              <li role="presentation">
+                <button
+                  id="tab-1"
+                  class="button tab-button"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="panel-1"
+                  data-target="#panel-1"
+                  tabindex="0">
+                  2023
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  id="tab-2"
+                  class="button tab-button"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="panel-2"
+                  data-target="#panel-2"
+                  tabindex="-1">
+                  2022
+                </button>
+              </li>
+            </ul>
+            <div class="tabs_panels">
+              <!-- Panel 1 -->
+              <div id="panel-1" class="tab-content" role="tabpanel" aria-labelledby="tab-1" tabindex="0">
+                <article>
+                  <h2>Header Tab 1</h2>
+                  <h3>Header 2</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam rhoncus aliquam metus. ...</p>
+                </article>
               </div>
-              <div class="form-item">
-                <label for="surname" id="surname-label">Last Name <span class="required">*</span></label>
-                <input
-                  type="text"
-                  id="surname"
-                  name="surname"
-                  aria-labelledby="surname-label"
-                  aria-required="true"
-                  required />
-                <div class="error-message" id="surname-error" aria-live="polite"></div>
+              <!-- Panel 2 -->
+              <div id="panel-2" class="tab-content" role="tabpanel" aria-labelledby="tab-2" tabindex="0" hidden>
+                <article>
+                  <h2>Header Tab 2</h2>
+                  <h3>Header 2</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam rhoncus aliquam metus. ...</p>
+                </article>
               </div>
             </div>
-            <div class="form-item">
-              <label for="email" id="email-label">Email Address <span class="required">*</span></label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                aria-labelledby="email-label"
-                aria-required="true"
-                required
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
-              <div class="error-message" id="email-error" aria-live="polite"></div>
-            </div>
-            <div class="form-item">
-              <label for="phone" id="phone-label">Phone Number</label>
-              <input type="tel" id="phone" name="phone" aria-labelledby="phone-label" pattern="[0-9+\s()-]{7,}" />
-              <div class="error-message" id="phone-error" aria-live="polite"></div>
-            </div>
-            <div class="form-item">
-              <label for="message" id="message-label">Message</label>
-              <textarea id="message" name="message" rows="5" aria-labelledby="message-label"></textarea>
-              <div class="error-message" id="message-error" aria-live="polite"></div>
-            </div>
-            <div class="form-controls">
-              <button type="submit" class="button">Send Message</button>
-            </div>
-          </form>
+          </div>
+
+          <!-- Load tabs script -->
+          <script async src="./js/tabs.js"></script>
         </div>
       </section>
     </main>

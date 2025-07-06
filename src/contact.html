@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include('./components/head-1.html') @@include('./components/fav.html')
+    <title>Website title</title>
+    @@include('./components/head-2.html') @@include('./components/head-3.html')
+  </head>
+  <body>
+    @@include('./components/header.html')
+    <main id="main-content">
+      <div class="page-header page-header-secondary">
+        <div class="container">
+          <h1>Kontakty</h1>
+        </div>
+      </div>
+      <section class="padding-both">
+        <div class="container">
+          <div class="content-wrapper">
+            <div class="grid-even-col col-2 even-gap-10 mb-20">
+              <div class="flex-col gap-1">
+                <h2 class="mb-4">FC Hradec Králové</h2>
+                <p>Malšovická 821/1</p>
+                <p>Malšovice</p>
+                <p>Hradec Králové 9</p>
+                <p class="mb-4">500 09</p>
+                <p>IČ: 27479307</p>
+                <p>DIČ: CZ27479307</p>
+                <p class="mb-4">Č. Ú.: 197526662/0300</p>
+                <a class="fc-text-body underline" href="" target="_blank"> Download link </a>
+              </div>
+              <iframe
+                class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2553.562452459293!2d15.844394515312988!3d50.20670911277918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470dd4ce2b538cd3%3A0x6ff75432289cd89d!2zw5pwcmtvdmEgNDczLzEsIE1hbMWhb3ZpY2UsIDUwMCAwOSBIcmFkZWMgS3LDoWxvdsOp!5e0!3m2!1scs!2scz!4v1513861148542"
+                style="border: 0"
+                allowfullscreen=""
+                width="100%"
+                frameborder="0">
+              </iframe>
+            </div>
+            <div class="divider mb-20"></div>
+            <div class="grid-even-col col-4 gap-x-10 gap-y-20">
+              <div class="card-contact flex-col gap-1">
+                <p class="h3 mb-4">Sekretariát klubu</p>
+                <p>fchk@fchk.cz</p>
+                <p>+420 495 515 532</p>
+              </div>
+              <div class="card-contact flex-col gap-1">
+                <p class="h3 mb-4">Fanshop</p>
+                <p>objednavky@team-jako.cz</p>
+                <p>+420 770 613 123</p>
+              </div>
+              <div class="card-contact flex-col gap-1">
+                <p class="h3 mb-4">Prodej vstupenek</p>
+                <p>info@enigoo.cz</p>
+                <p>+420 461 049 232</p>
+              </div>
+              <div class="card-contact flex-col gap-1">
+                <p class="h3 mb-4">Sportbar Pod Lízátky</p>
+                <p>podlizatky@post.cz</p>
+                <p>+420 725 992 820</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('./components/footer.html') @@include('./components/scripts.html')
+  </body>
+</html>

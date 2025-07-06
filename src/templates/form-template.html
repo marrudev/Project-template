@@ -1,13 +1,29 @@
-<form id="contact-form" action="/submit-form" method="post" novalidate>
-  <div class="form-items-row">
+<form id="contact-form" action="/submit-form" method="post" role="form">
+  <div class="form-group">
     <div class="form-item">
       <label for="name" id="name-label">First Name <span class="required">*</span></label>
-      <input type="text" id="name" name="name" aria-labelledby="name-label" aria-required="true" required />
+      <input
+        type="text"
+        id="name"
+        name="name"
+        autocomplete="given-name"
+        aria-labelledby="name-label"
+        aria-required="true"
+        aria-describedby="name-error"
+        required />
       <div class="error-message" id="name-error" aria-live="polite"></div>
     </div>
     <div class="form-item">
       <label for="surname" id="surname-label">Last Name <span class="required">*</span></label>
-      <input type="text" id="surname" name="surname" aria-labelledby="surname-label" aria-required="true" required />
+      <input
+        type="text"
+        id="surname"
+        name="surname"
+        autocomplete="family-name"
+        aria-labelledby="surname-label"
+        aria-required="true"
+        aria-describedby="surname-error"
+        required />
       <div class="error-message" id="surname-error" aria-live="polite"></div>
     </div>
   </div>
@@ -17,20 +33,44 @@
       type="email"
       id="email"
       name="email"
+      autocomplete="email"
       aria-labelledby="email-label"
       aria-required="true"
+      aria-describedby="email-error"
       required
-      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+      pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" />
     <div class="error-message" id="email-error" aria-live="polite"></div>
   </div>
   <div class="form-item">
     <label for="phone" id="phone-label">Phone Number</label>
-    <input type="tel" id="phone" name="phone" aria-labelledby="phone-label" pattern="[0-9+\s()-]{7,}" />
+    <input
+      type="tel"
+      id="phone"
+      name="phone"
+      autocomplete="tel"
+      aria-labelledby="phone-label"
+      aria-describedby="phone-error"
+      pattern="[0-9+\s()-]{7,}" />
     <div class="error-message" id="phone-error" aria-live="polite"></div>
   </div>
   <div class="form-item">
+    <label for="select" id="select-label">Select</label>
+    <select name="select" id="select">
+      <option value="" disabled selected>Select an option</option>
+      <option value="option-1">Option 1</option>
+      <option value="option-2">Option 2</option>
+      <option value="option-3">Option 3</option>
+    </select>
+  </div>
+  <div class="form-item">
     <label for="message" id="message-label">Message</label>
-    <textarea id="message" name="message" rows="5" aria-labelledby="message-label"></textarea>
+    <textarea
+      id="message"
+      name="message"
+      rows="5"
+      maxlength="1000"
+      aria-labelledby="message-label"
+      aria-describedby="message-error"></textarea>
     <div class="error-message" id="message-error" aria-live="polite"></div>
   </div>
   <div class="form-controls">

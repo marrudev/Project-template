@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include('./components/head-1.html') @@include('./components/fav.html')
+    <title>Website Title</title>
+    @@include('./components/head-2.html') @@include('./components/head-3.html')
+  </head>
+  <body>
+    @@include('./components/header.html')
+    <main id="main-content">
+      <section>
+        <div class="page-header page-header-player">
+          <div class="container">
+            <div class="flex-row gap-4 flex-wrap align-center mb-4">
+              <p class="fc-accent h1 player-profile_header-number">35</p>
+              <h1><span class="fc-text-body">Jakub</span> Kučera</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!---- Main section ---->
+      <section class="padding-both">
+        <div class="container">
+          <div class="grid-even-col col-2 w-100">
+            <div class="flex-col">
+              <div class="player-profile-img-wrapper has-gradient-overlay">
+                <img class="player-photo" src="./images/roster/player.webp" alt="" loading="lazy" />
+              </div>
+            </div>
+            <div class="flex-col gap-6">
+              <div class="entry-item flex-col gap-1">
+                <p>Datum narození</p>
+                <p class="fc-white fw-600">28.1.1997</p>
+              </div>
+              <div class="flex-row gap-x-15 gap-y-6">
+                <div class="entry-item flex-col gap-1">
+                  <p>Výška</p>
+                  <p class="fc-white fw-600">183 cm</p>
+                </div>
+                <div class="entry-item flex-col gap-1">
+                  <p>Váha</p>
+                  <p class="fc-white fw-600">80 kg</p>
+                </div>
+              </div>
+              <div class="entry-item flex-col gap-1">
+                <p>Národnost</p>
+                <div class="flex-row align-center gap-2">
+                  <img class="player-profile_flag" src="./images/icons/flag-cz.png" alt="Czech flag" />
+                  <p class="fc-white fw-600">Česká republika</p>
+                </div>
+              </div>
+              <div class="entry-item flex-col gap-1">
+                <p>Přezdívka</p>
+                <p class="fc-white fw-600">Kopáč</p>
+              </div>
+              <div class="entry-item flex-col gap-1">
+                <p>Preferovaná pozice</p>
+                <p class="fc-white fw-600">Útočník</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!---- Statistics ---->
+      <section class="padding-bottom">
+        <div class="container">
+          <h2>Statistiky</h2>
+          <div class="table-wrapper custom-scrollbar">
+            <table class="table table-statistics">
+              <thead>
+                <tr>
+                  <th class="cell-100 text-left">Sezóna</th>
+                  <th>Z</th>
+                  <th>Min</th>
+                  <th>G</th>
+                  <th>A</th>
+                  <th>ŽK</th>
+                  <th>ČK</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-left">Chance Liga 2025/26</td>
+                  <td>12</td>
+                  <td>1 234</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>1</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td class="text-left">Chance Liga 2024/25</td>
+                  <td>12</td>
+                  <td>3 214</td>
+                  <td>3</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td class="text-left">FORTUNA:LIGA 2023/24</td>
+                  <td>12</td>
+                  <td>3 214</td>
+                  <td>3</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td class="text-left">FORTUNA:LIGA 2022/23</td>
+                  <td>12</td>
+                  <td>3 214</td>
+                  <td>3</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <!---- Articles ---->
+      <section class="padding-bottom">
+        <div class="container">
+          <h2>Články</h2>
+          <div class="swiper swiper-articles">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">@@include('./components/card-article.html')</div>
+              <div class="swiper-slide">@@include('./components/card-article.html')</div>
+              <div class="swiper-slide">@@include('./components/card-article.html')</div>
+              <div class="swiper-slide">@@include('./components/card-article.html')</div>
+              <div class="swiper-slide">@@include('./components/card-article.html')</div>
+              <div class="swiper-slide">@@include('./components/card-article.html')</div>
+            </div>
+          </div>
+          <div class="swiper-navigation">
+            <img
+              class="swiper-arrow swiper-articles-arrow-next ml-auto"
+              src="./images/icons/swiper-arrow-left.svg"
+              alt="" />
+            <img class="swiper-arrow swiper-articles-arrow-prev" src="./images/icons/swiper-arrow-right.svg" alt="" />
+          </div>
+        </div>
+      </section>
+      <!---- Gellery ---->
+      <section class="padding-bottom">
+        <div class="container">
+          <h2>Fotogalerie</h2>
+          <div class="swiper swiper-gallery">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">@@include('./components/card-gallery.html')</div>
+              <div class="swiper-slide">@@include('./components/card-gallery.html')</div>
+              <div class="swiper-slide">@@include('./components/card-gallery.html')</div>
+              <div class="swiper-slide">@@include('./components/card-gallery.html')</div>
+              <div class="swiper-slide">@@include('./components/card-gallery.html')</div>
+              <div class="swiper-slide">@@include('./components/card-gallery.html')</div>
+            </div>
+          </div>
+          <div class="swiper-navigation">
+            <img
+              class="swiper-arrow swiper-gallery-arrow-next ml-auto"
+              src="./images/icons/swiper-arrow-left.svg"
+              alt="" />
+            <img class="swiper-arrow swiper-gallery-arrow-prev" src="./images/icons/swiper-arrow-right.svg" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('./components/footer.html') @@include('./components/scripts.html')
+    <script src="./js/swipers.js"></script>
+  </body>
+</html>

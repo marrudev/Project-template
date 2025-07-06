@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include('./components/head-1.html') @@include('./components/fav.html')
+    <title>Website title</title>
+    @@include('./components/head-2.html') @@include('./components/head-3.html')
+  </head>
+  <body>
+    @@include('./components/header.html')
+    <main id="main-content">
+      <div class="page-header">
+        <div class="container">
+          <h1>Linktree title</h1>
+        </div>
+      </div>
+      <section class="padding-both">
+        <div class="container">
+          <div class="content-wrapper flex-col">
+            <p class="mb-20 max-w-50">
+              Etiam dictum tincidunt diam. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+              deserunt mollit anim id est laborum. Suspendisse sagittis ultrices augue. Donec ipsum massa, ullamcorper
+              in, auctor et, scelerisque sed, est. Aliquam erat volutpat. Maecenas sollicitudin. Cum sociis natoque
+              penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi leo mi, nonummy eget tristique
+              non, rhoncus non leo. In dapibus augue non sapien. Nulla turpis magna, cursus sit amet, suscipit a,
+              interdum id, felis. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Nulla
+              quis diam. Morbi leo mi, nonummy eget tristique non, rhoncus non leo. Integer malesuada. Duis viverra diam
+              non justo. Etiam commodo dui eget wisi. In dapibus augue non sapien.
+            </p>
+            <div class="grid-even-col col-4 even-gap-4 mb-20">
+              @@include('./components/card-linktree.html') @@include('./components/card-linktree.html')
+              @@include('./components/card-linktree.html') @@include('./components/card-linktree.html')
+              @@include('./components/card-linktree.html') @@include('./components/card-linktree.html')
+              @@include('./components/card-linktree.html')
+            </div>
+            <div class="grid-even-col col-4 even-gap-4">
+              @@include('./components/card-linktree-with-img.html')
+              @@include('./components/card-linktree-with-img.html')
+              @@include('./components/card-linktree-with-img.html')
+              @@include('./components/card-linktree-with-img.html')
+              @@include('./components/card-linktree-with-img.html')
+              @@include('./components/card-linktree-with-img.html')
+              @@include('./components/card-linktree-with-img.html')
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('./components/footer.html') @@include('./components/scripts.html')
+  </body>
+</html>

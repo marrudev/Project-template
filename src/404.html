@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include('./components/head-1.html') @@include('./components/fav.html')
+    <title>Website Title</title>
+    @@include('./components/head-2.html') @@include('./components/head-3.html')
+  </head>
+  <body>
+    @@include('./components/header.html')
+    <main id="main-content">
+      <section class="padding-both padding-top-extra section-fullscreen">
+        <div class="container">
+          <div class="flex-col align-center width-full text-center">
+            <h1 class="mb-4">Error <span class="fc-accent">404</span></h1>
+            <p class="mb-20">Je nám líto, ale požadovaná stránka nebyla nalezena.</p>
+            <a href="" class="button">Zpět na hlavní stránku</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('./components/footer.html') @@include('./components/scripts.html')
+  </body>
+</html>

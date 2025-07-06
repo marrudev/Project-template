@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include('./components/head-1.html') @@include('./components/fav.html')
+    <title>Webiste title</title>
+    @@include('./components/head-2.html') @@include('./components/head-3.html')
+  </head>
+  <body>
+    @@include('./components/header.html')
+    <main id="main-content">
+      <div class="page-header">
+        <div class="container">
+          <h1>Vedení klubu</h1>
+        </div>
+        <div class="page-header-line"></div>
+      </div>
+      <section class="padding-both">
+        <div class="container">
+          <div class="static-page">
+            <h2>Představenstvo klubu</h2>
+            <ul class="grid-even-col col-3 gap-x-10 gap-y-10">
+              @@include('./components/card-leadership.html') @@include('./components/card-leadership.html')
+              @@include('./components/card-leadership.html') @@include('./components/card-leadership.html')
+              @@include('./components/card-leadership.html')
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="padding-bottom">
+        <div class="container">
+          <div class="static-page">
+            <h2>Dozorčí rada klubu</h2>
+            <ul class="grid-even-col col-3 gap-x-10 gap-y-10">
+              @@include('./components/card-leadership.html')
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('./components/footer.html') @@include('./components/scripts.html')
+  </body>
+</html>

@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+.nav-secondary {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 1.5rem;
+
+  a {
+    padding: 0 0.75rem 0.75rem 0.75rem;
+    color: $text-body;
+    line-height: 1;
+    text-decoration: none;
+    border-bottom: 2px solid $border-primary;
+    white-space: nowrap;
+
+    &:is(:hover, :focus) {
+      text-decoration: none;
+      color: $white;
+    }
+
+    &.active,
+    &[aria-selected='true'] {
+      color: $white;
+      font-weight: 600;
+      border-bottom: 2px solid $accent;
+    }
+  }
+}

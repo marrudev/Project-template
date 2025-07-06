@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="resource-type" content="document" />
+    <meta name="rating" content="general" />
+    <meta name="distribution" content="global" />
+    <meta name="robots" content="index, follow" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- FAV -->
+
+    <title>Website Title</title>
+    <!--- Preconnect--->
+    <link rel="preload" href="./font/xxx.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+    <link rel="preload" href="./font/xxx.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+    <!-- Asynchronní JS (GA etc.) -->
+    <!--- Swiper JS --->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--- @Import CSS --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!--- Local CSS --->
+    <link rel="stylesheet" href="./css/cookieconsent.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link href="./font/stylesheet.css" rel="stylesheet" type="text/css" />
+    <!-- Cookie consent -->
+    <script defer src="./js/cookieconsent.js"></script>
+    <script defer src="./js/cookieconsent-init.js"></script>
+    <script defer src="./js/cookieconsent-social.js" type="text/plain" data-cookiecategory="social"></script>
+    <!-- SEO, meta značky, ikony, Open Graph… -->
+    <meta name="description" content="" />
+    <meta property="og:title" itemprop="name" content="" />
+    <meta property="og:description" itemprop="description" content="XXXXX" />
+    <meta property="og:image" content="./images/utility/og-img.jpg" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="Webiste" />
+  </head>
+  <body>
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="skip-to-content button">Přeskočit na hlavní obsah</a>
+
+    <!---- Main navigation ---->
+    <header class="header-nav">
+      <div class="container">
+        <nav class="main-nav" role="navigation" aria-label="Hlavní navigace">
+          <a href="./index.html" aria-label="Přejít na hlavní stranu">
+            <img class="nav-logo" src="./images/logos/teams/hradec.png" alt="Klubové logo" />
+          </a>
+
+          <button class="menu-btn" tabindex="0" role="button" aria-label="Otevřít menu">
+            <div class="menu-btn-burger"></div>
+          </button>
+
+          <div class="nav-menu">
+            <ul class="nav-menu_list">
+              <li class="nav-menu_item">
+                <a href="#" class="nav-menu_link">Klub</a>
+              </li>
+              <li class="nav-menu_item has-submenu">
+                <div class="nav-menu_link-wrapper">
+                  <a href="#" class="nav-menu_link" aria-haspopup="true">Týmy</a>
+                  <button class="dropdown-toggle" aria-expanded="false"></button>
+                </div>
+                <ul class="dropdown-menu" role="menu">
+                  <li>
+                    <a href="#" class="nav-submenu_link">A-tým</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-submenu_link">Ženy</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-submenu_link">Mládež</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-menu_item">
+                <a href="#" class="nav-menu_link">Novinky</a>
+              </li>
+              <li class="nav-menu_item has-submenu">
+                <div class="nav-menu_link-wrapper">
+                  <a href="#" class="nav-menu_link" aria-haspopup="true">Týmy</a>
+                  <button class="dropdown-toggle" aria-expanded="false"></button>
+                </div>
+                <ul class="dropdown-menu" role="menu">
+                  <li>
+                    <a href="#" class="nav-submenu_link">A-tým</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-submenu_link">Ženy</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-submenu_link">Mládež</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-menu_item">
+                <a href="#" class="nav-menu_link">Fanzóna</a>
+              </li>
+              <li class="nav-menu_item">
+                <a href="#" class="nav-menu_link">Kontakty</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <script defer src="./js/main-nav.js"></script>
+
+    <main id="main-content">
+      <div class="article-header">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="./images/content/img1.webp" />
+          <source media="(min-width: 992px)" srcset="" />
+          <source media="(min-width: 768px)" srcset="" />
+          <source media="(min-width: 576px)" srcset="" />
+          <img src="./images/content/img1.webp" alt="" loading="lazy" decoding="async" />
+        </picture>
+      </div>
+      <section class="padding-both">
+        <div class="container">
+          <article class="article">
+            <h1>Article title</h1>
+            <div class="article-details w-100">
+              <p class="mb-6"><span class="fc-accent uppercase">Preview</span> - <span>Pondělí</span></p>
+              <div class="divider"></div>
+            </div>
+            <p class="perex">
+              Jistě zažili hradečtí fotbalisté i klidnější koncovky zápasů. V zahajovacím kole nové sezony se postavili
+              Teplicím a dlouho to vypadalo, že vyrovnaný duel skončí dělbou bodů. Jenže přes skvěle fandících šest
+              tisíc diváků v Malšovické aréně zmrazil vlastní gól Čiháka na konci základní hrací doby. Situaci ale
+              předcházel chybně rozehraný roh, videorozhodčí sklářům branku neuznal a pak to přišlo. Pátá nastavená
+              minuta, tvrdá střela Spáčila a Votroci mohou slavit tři body po výhře 1:0!
+            </p>
+            <div class="divider"></div>
+            <h2>První poločas nabídl svižný fotbal, ale bez branek</h2>
+            <p>
+              V teplém nedělním večeru zahájil Hradec sezonu s chutí a aktivně. Už v první minutě získal dva rohové kopy
+              za sebou, jenže ani z jednoho nedokázal výrazněji zahrozit. Svižný a vyrovnaný fotbal začali Tepličtí
+              lehce naklánět na svou stranu po čtvrthodině hry, když přišly dva míče do vápna na Gninga. Zatímco první
+              hlavičku lapil Zadražil bez potíží „do teplých“, v 18. minutě mu ve vzduchu pomohl Čihák, jenž teplickému
+              útočníkovi nedal prostor.
+            </p>
+            <ul>
+              <li>Položka listu 1</li>
+              <li>Položka listu 2</li>
+              <li>Položka listu 3</li>
+            </ul>
+            <p>
+              Po občerstvovací pauze se dostal do zajímavé příležitosti Juliš, když na levé straně odvedl skvělou práci
+              Pilař a nabídl mu solidní střeleckou pozici, domácího útočníka ale zradil první dotek a následný pokus už
+              napálil jenom do obránce před sebou. Severočechům se s blížícím závěrem první půle nabízel prostor
+              především na krajích, zejména Cykalo byl v průnicích velmi aktivní, ale Zadražilovo čisté konto ohroženo
+              nebylo.
+            </p>
+            <img src="./images/content/img2.webp" alt="" />
+            <p>
+              V teplém nedělním večeru zahájil Hradec sezonu s chutí a aktivně. Už v první minutě získal dva rohové kopy
+              za sebou, jenže ani z jednoho nedokázal výrazněji zahrozit. Svižný a vyrovnaný fotbal začali Tepličtí
+              lehce naklánět na svou stranu po čtvrthodině hry, když přišly dva míče do vápna na Gninga. Zatímco první
+              hlavičku lapil Zadražil bez potíží „do teplých“, v 18. minutě mu ve vzduchu pomohl Čihák, jenž teplickému
+              útočníkovi nedal prostor.
+            </p>
+            <q> "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, dolores." </q>
+            <p>
+              V teplém nedělním večeru zahájil Hradec sezonu s chutí a aktivně. Už v první minutě získal dva rohové kopy
+              za sebou, jenže ani z jednoho nedokázal výrazněji zahrozit. Svižný a vyrovnaný fotbal začali Tepličtí
+              lehce naklánět na svou stranu po čtvrthodině hry, když přišly dva míče do vápna na Gninga. Zatímco první
+              hlavičku lapil Zadražil bez potíží „do teplých“, v 18. minutě mu ve vzduchu pomohl Čihák, jenž teplickému
+              útočníkovi nedal prostor.
+            </p>
+            <h2>První poločas nabídl svižný fotbal, ale bez branek</h2>
+            <img src="./images/content/img3.webp" alt="" />
+            <p>
+              Po občerstvovací pauze se dostal do zajímavé příležitosti Juliš, když na levé straně odvedl skvělou práci
+              Pilař a nabídl mu solidní střeleckou pozici, domácího útočníka ale zradil první dotek a následný pokus už
+              napálil jenom do obránce před sebou. Severočechům se s blížícím závěrem první půle nabízel prostor
+              především na krajích, zejména Cykalo byl v průnicích velmi aktivní, ale Zadražilovo čisté konto ohroženo
+              nebylo.
+            </p>
+          </article>
+          <div class="article-socials">
+            <p class="h3">Sdílet</p>
+            <div class="flex-row gap-4 flex-wrap align-center">
+              <a href=""><img src="./images/icons/facebook-social.svg" alt="Facebook icon" /></a>
+              <a href=""><img src="./images/icons/instagram-social.svg" alt="Instagram icon" /></a>
+              <a href=""><img src="./images/icons/x-social.svg" alt="X icon" /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="padding-bottom">
+        <div class="container">
+          <h2>Čtěte také</h2>
+          <div class="swiper swiper-articles">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <li role="none">
+                  <a href="" class="card-article" role="gridcell" tabindex="0" aria-label="Article title">
+                    <div class="article-img-wrapper">
+                      <img src="./images/content/img1.webp" alt="" loading="lazy" />
+                    </div>
+                    <p class="card-article_header">Jsem rád, že jsem mohl pomoct týmu, hlásí Jakub Kučera.</p>
+                    <div class="flex-row gap-4 justify-between">
+                      <p class="fc-accent uppercase card-info-text">Preview</p>
+                      <p class="card-info-text fc-text-body">Neděle</p>
+                    </div>
+                  </a>
+                </li>
+              </div>
+              <div class="swiper-slide">
+                <li role="none">
+                  <a href="" class="card-article" role="gridcell" tabindex="0" aria-label="Article title">
+                    <div class="article-img-wrapper">
+                      <img src="./images/content/img1.webp" alt="" loading="lazy" />
+                    </div>
+                    <p class="card-article_header">Jsem rád, že jsem mohl pomoct týmu, hlásí Jakub Kučera.</p>
+                    <div class="flex-row gap-4 justify-between">
+                      <p class="fc-accent uppercase card-info-text">Preview</p>
+                      <p class="card-info-text fc-text-body">Neděle</p>
+                    </div>
+                  </a>
+                </li>
+              </div>
+              <div class="swiper-slide">
+                <li role="none">
+                  <a href="" class="card-article" role="gridcell" tabindex="0" aria-label="Article title">
+                    <div class="article-img-wrapper">
+                      <img src="./images/content/img1.webp" alt="" loading="lazy" />
+                    </div>
+                    <p class="card-article_header">Jsem rád, že jsem mohl pomoct týmu, hlásí Jakub Kučera.</p>
+                    <div class="flex-row gap-4 justify-between">
+                      <p class="fc-accent uppercase card-info-text">Preview</p>
+                      <p class="card-info-text fc-text-body">Neděle</p>
+                    </div>
+                  </a>
+                </li>
+              </div>
+              <div class="swiper-slide">
+                <li role="none">
+                  <a href="" class="card-article" role="gridcell" tabindex="0" aria-label="Article title">
+                    <div class="article-img-wrapper">
+                      <img src="./images/content/img1.webp" alt="" loading="lazy" />
+                    </div>
+                    <p class="card-article_header">Jsem rád, že jsem mohl pomoct týmu, hlásí Jakub Kučera.</p>
+                    <div class="flex-row gap-4 justify-between">
+                      <p class="fc-accent uppercase card-info-text">Preview</p>
+                      <p class="card-info-text fc-text-body">Neděle</p>
+                    </div>
+                  </a>
+                </li>
+              </div>
+              <div class="swiper-slide">
+                <li role="none">
+                  <a href="" class="card-article" role="gridcell" tabindex="0" aria-label="Article title">
+                    <div class="article-img-wrapper">
+                      <img src="./images/content/img1.webp" alt="" loading="lazy" />
+                    </div>
+                    <p class="card-article_header">Jsem rád, že jsem mohl pomoct týmu, hlásí Jakub Kučera.</p>
+                    <div class="flex-row gap-4 justify-between">
+                      <p class="fc-accent uppercase card-info-text">Preview</p>
+                      <p class="card-info-text fc-text-body">Neděle</p>
+                    </div>
+                  </a>
+                </li>
+              </div>
+              <div class="swiper-slide">
+                <li role="none">
+                  <a href="" class="card-article" role="gridcell" tabindex="0" aria-label="Article title">
+                    <div class="article-img-wrapper">
+                      <img src="./images/content/img1.webp" alt="" loading="lazy" />
+                    </div>
+                    <p class="card-article_header">Jsem rád, že jsem mohl pomoct týmu, hlásí Jakub Kučera.</p>
+                    <div class="flex-row gap-4 justify-between">
+                      <p class="fc-accent uppercase card-info-text">Preview</p>
+                      <p class="card-info-text fc-text-body">Neděle</p>
+                    </div>
+                  </a>
+                </li>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-navigation">
+            <img
+              class="swiper-arrow swiper-articles-arrow-next ml-auto"
+              src="./images/icons/swiper-arrow-left.svg"
+              alt="" />
+            <img class="swiper-arrow swiper-articles-arrow-prev" src="./images/icons/swiper-arrow-right.svg" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <!---- Footer ---->
+    <footer>
+      <div class="container">
+        <div class="flex flex-col fj-center gap-12">
+          <div class="footer-nav-wrapper">
+            <div class="footer-col gap-6">
+              <a href="" class="h4">Kontakty</a>
+              <div class="footer-list has-dropdown">
+                <p>FC Hradec Králové, a.s.</p>
+                <p>Malšovická 821/1</p>
+                <p>Malšovice</p>
+                <p>Hradec Králové 9</p>
+                <p>9500 09</p>
+                <p>+420 495 515 532</p>
+                <p>fchk@fchk.cz</p>
+              </div>
+            </div>
+            <div class="footer-col gap-6">
+              <a href="" class="h4">Klub</a>
+              <ul class="nav-list footer-list has-dropdown" role="menubar" aria-label="Menu xy...">
+                <li role="none"><a href="" role="menuitem" tabindex="0" aria-label="">Historie</a></li>
+                <li role="none"><a href="" role="menuitem" tabindex="0" aria-label="">Stadion</a></li>
+                <li role="none"><a href="" role="menuitem" tabindex="0" aria-label="">Vedení klubu</a></li>
+                <li role="none"><a href="" role="menuitem" tabindex="0" aria-label="">Partneři</a></li>
+                <li role="none"><a href="" role="menuitem" tabindex="0" aria-label="">Akreditace</a></li>
+              </ul>
+            </div>
+            <div class="footer-col gap-6">
+              <a href="" class="h4">Týmy</a>
+              <ul class="nav-list footer-list has-dropdown" role="menubar" aria-label="Menu xy...">
+                <li role="none"><a href="" role="menuitem" tabindex="0" aria-label="">A-tým</a></li>
+                <li role="none"><a href="" role="menuitem" tabindex="0" aria-label="">Ženy</a></li>
+                <li role="none"><a href="" role="menuitem" tabindex="0" aria-label="">Mládež</a></li>
+              </ul>
+              <a href="" class="h4">Link 2</a>
+              <a href="" class="h4">Link 3</a>
+            </div>
+            <div class="footer-col gap-6">
+              <a href="" class="h4">Rozcestník</a>
+              <ul class="nav-list footer-list has-dropdown" role="menubar" aria-label="Menu xy...">
+                <li role="none"><a href="" role="menuitem" tabindex="0" aria-label="">Fanzóna</a></li>
+                <li role="none"><a href="" role="menuitem" tabindex="0" aria-label="">Fanshop</a></li>
+                <li role="none"><a href="" role="menuitem" tabindex="0" aria-label="">Ticketing</a></li>
+              </ul>
+            </div>
+            <div class="footer-col gap-6 is-last">
+              <a href="" class="h4">Mobilní aplikace</a>
+              <div class="footer-list">
+                <div class="flex-row gap-4 flex-wrap mb-10">
+                  <div class="flex-row gap-4 flex-wrap">
+                    <a href="">
+                      <img
+                        class="store-button"
+                        src="./images/content/appstore-download.png"
+                        alt="Appstore tlačítko ke stažení" />
+                    </a>
+                    <a href="">
+                      <img
+                        class="store-button"
+                        src="./images/content/googleplay-download.png"
+                        alt="Googleplay tlačítko ke stažení" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <p class="h4">Sledujte nás</p>
+              <div class="footer-list">
+                <div class="flex-row gap-x-6 gap-y-4 flex-wrap">
+                  <a href="" target="_blank"><img class="socials-icon" src="./images/icons/facebook.svg" alt="" /></a>
+                  <a href="" target="_blank"><img class="socials-icon" src="./images/icons/instagram.svg" alt="" /></a>
+                  <a href="" target="_blank"><img class="socials-icon" src="./images/icons/youtube.svg" alt="" /></a>
+                  <a href="" target="_blank"><img class="socials-icon" src="./images/icons/x.svg" alt="" /></a>
+                  <a href="" target="_blank"><img class="socials-icon" src="./images/icons/tiktok.svg" alt="" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="divider-line"></div>
+          <div>
+            © 2025 Company name, a.s.,
+            <a href="https://esportsmedia.cz/" target="_blank"> eSports.cz, s.r.o.</a> |
+            <a href="">Ochrana osobních údajů</a> |
+            <a href="javascript:void()" type="button" data-cc="c-settings">Nastavení cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Secondary navigation -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Initialize all lists with .nav-list class
+        const navLists = document.querySelectorAll('.nav-list');
+
+        navLists.forEach(initializeKeyboardNavigation);
+
+        function initializeKeyboardNavigation(listElement) {
+          const navItems = listElement.querySelectorAll('a[role="menuitem"], a[role="gridcell"]');
+          let currentIndex = 0;
+
+          // Set initial focus - prioritize current page or first item
+          const currentPageItem = listElement.querySelector('a[aria-current="page"]');
+          if (currentPageItem) {
+            currentIndex = Array.from(navItems).indexOf(currentPageItem);
+          }
+          setActiveItem(currentIndex);
+
+          function setActiveItem(index) {
+            // Remove tabindex from all items
+            navItems.forEach(item => item.setAttribute('tabindex', '-1'));
+            // Set tabindex="0" on the active item
+            navItems[index].setAttribute('tabindex', '0');
+            currentIndex = index;
+          }
+
+          function getGridDimensions() {
+            if (!navItems.length) return {cols: 1, rows: 1};
+
+            const firstItem = navItems[0];
+            const containerRect = listElement.getBoundingClientRect();
+            const itemRect = firstItem.getBoundingClientRect();
+
+            const cols = Math.round(containerRect.width / itemRect.width);
+            const rows = Math.ceil(navItems.length / cols);
+
+            return {cols, rows};
+          }
+
+          // Handle keyboard navigation
+          listElement.addEventListener('keydown', function (e) {
+            let targetIndex;
+            const {cols} = getGridDimensions();
+            const isGrid =
+              listElement.hasAttribute('role') &&
+              (listElement.getAttribute('role') === 'grid' || navItems[0]?.getAttribute('role') === 'gridcell');
+
+            switch (e.key) {
+              case 'ArrowRight':
+                e.preventDefault();
+                targetIndex = (currentIndex + 1) % navItems.length;
+                setActiveItem(targetIndex);
+                navItems[targetIndex].focus();
+                break;
+
+              case 'ArrowLeft':
+                e.preventDefault();
+                targetIndex = (currentIndex - 1 + navItems.length) % navItems.length;
+                setActiveItem(targetIndex);
+                navItems[targetIndex].focus();
+                break;
+
+              case 'ArrowDown':
+                if (isGrid) {
+                  e.preventDefault();
+                  targetIndex = Math.min(currentIndex + cols, navItems.length - 1);
+                  setActiveItem(targetIndex);
+                  navItems[targetIndex].focus();
+                }
+                break;
+
+              case 'ArrowUp':
+                if (isGrid) {
+                  e.preventDefault();
+                  targetIndex = Math.max(currentIndex - cols, 0);
+                  setActiveItem(targetIndex);
+                  navItems[targetIndex].focus();
+                }
+                break;
+
+              case 'Home':
+                e.preventDefault();
+                setActiveItem(0);
+                navItems[0].focus();
+                break;
+
+              case 'End':
+                e.preventDefault();
+                targetIndex = navItems.length - 1;
+                setActiveItem(targetIndex);
+                navItems[targetIndex].focus();
+                break;
+
+              case 'Enter':
+              case ' ':
+                e.preventDefault();
+                navItems[currentIndex].click();
+                break;
+            }
+          });
+
+          // Update currentIndex when clicking or focusing items
+          navItems.forEach((item, index) => {
+            item.addEventListener('click', function () {
+              setActiveItem(index);
+            });
+
+            item.addEventListener('focus', function () {
+              currentIndex = index;
+              setActiveItem(index);
+            });
+          });
+        }
+      });
+    </script>
+
+    <script src="./js/swipers.js"></script>
+  </body>
+</html>

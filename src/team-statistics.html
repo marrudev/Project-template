@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include('./components/head-1.html') @@include('./components/fav.html')
+    <title>Webiste Title</title>
+    @@include('./components/head-2.html') @@include('./components/head-3.html')
+  </head>
+  <body>
+    @@include('./components/header.html')
+    <main id="main-content">
+      <div class="page-header">
+        <div class="container">
+          <h1><span class="fc-accent">A tým</span> statistiky</h1>
+        </div>
+      </div>
+      <!-- Team Navigation -->
+      <section class="padding-both">
+        <div class="container">
+          <div class="nav-scrollable-wrapper hide-scrollbar">
+            <nav class="team-navigation" aria-label="Týmový rozcestník" role="navigation">
+              <ul class="nav-secondary nav-list" role="menubar">
+                <li role="none">
+                  <a href="./team-roster.html" role="menuitem" tabindex="0" aria-current="page"> Soupiska </a>
+                </li>
+                <li role="none">
+                  <a href="./team-roster.html#staff" role="menuitem" tabindex="-1">Realizační tým </a>
+                </li>
+                <li role="none">
+                  <a href="./team-matches.html" role="menuitem" tabindex="-1">Zápasy </a>
+                </li>
+                <li role="none">
+                  <a class="active" href="./team-statistics.html" role="menuitem" tabindex="-1">Statistiky</a>
+                </li>
+                <li role="none">
+                  <a href="./team-table.html" role="menuitem" tabindex="-1">Tabulka </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <!-- Filters -->
+      <section>
+        <div class="container">
+          <div class="filters-wrapper">
+            <select name="sezona" id="sezona-select">
+              <option value="" selected="">Sezona</option>
+              <option value="all">Všechny</option>
+              <option value="2024">2024/25</option>
+              <option value="2024">2023/24</option>
+              <option value="2023">2022/23</option>
+              <option value="2022">2021/22</option>
+            </select>
+          </div>
+        </div>
+      </section>
+      <!-- Content -->
+      <section class="padding-bottom">
+        <div class="container">
+          <h2>Brankáři</h2>
+          <div class="table-wrapper custom-scrollbar">
+            <table class="table table-statistics">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Post</th>
+                  <th class="cell-100 text-left">Jméno</th>
+                  <th>Z</th>
+                  <th>Min</th>
+                  <th>Ink</th>
+                  <th>Nul</th>
+                  <th>VG</th>
+                  <th>ŽK</th>
+                  <th>ČK</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="clickable-row" data-href="" tabindex="0" role="button" aria-label="Zobrazit profil hrače XY">
+                  <td>22</td>
+                  <td>B</td>
+                  <td class="text-left">Jméno Příjmení</td>
+                  <td>4</td>
+                  <td>1 234</td>
+                  <td>12</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>1</td>
+                  <td>4</td>
+                </tr>
+                <tr class="clickable-row" data-href="" tabindex="0" role="button" aria-label="Zobrazit profil hrače XY">
+                  <td>98</td>
+                  <td>B</td>
+                  <td class="text-left">Jméno Příjmení</td>
+                  <td>1</td>
+                  <td>3 214</td>
+                  <td>12</td>
+                  <td>3</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="padding-bottom">
+        <div class="container">
+          <h2>Hráči v poli</h2>
+          <div class="table-wrapper custom-scrollbar">
+            <table class="table table-statistics">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Post</th>
+                  <th class="cell-100 text-left">Jméno</th>
+                  <th>Z</th>
+                  <th>Min</th>
+                  <th>G</th>
+                  <th>A</th>
+                  <th>ŽK</th>
+                  <th>ČK</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="clickable-row" data-href="" tabindex="0" role="button" aria-label="Zobrazit profil hrače XY">
+                  <td>22</td>
+                  <td>O</td>
+                  <td class="text-left">Jméno Příjmení</td>
+                  <td>12</td>
+                  <td>1 234</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>1</td>
+                  <td>4</td>
+                </tr>
+                <tr class="clickable-row" data-href="" tabindex="0" role="button" aria-label="Zobrazit profil hrače XY">
+                  <td>98</td>
+                  <td>Ú</td>
+                  <td class="text-left">Jméno Příjmení</td>
+                  <td>12</td>
+                  <td>3 214</td>
+                  <td>3</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>4</td>
+                </tr>
+                <tr class="clickable-row" data-href="" tabindex="0" role="button" aria-label="Zobrazit profil hrače XY">
+                  <td>98</td>
+                  <td>O</td>
+                  <td class="text-left">Jméno Příjmení</td>
+                  <td>12</td>
+                  <td>3 214</td>
+                  <td>3</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>4</td>
+                </tr>
+                <tr class="clickable-row" data-href="" tabindex="0" role="button" aria-label="Zobrazit profil hrače XY">
+                  <td>98</td>
+                  <td>Ú</td>
+                  <td class="text-left">Jméno Příjmení</td>
+                  <td>12</td>
+                  <td>3 214</td>
+                  <td>3</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>4</td>
+                </tr>
+                <tr class="clickable-row" data-href="" tabindex="0" role="button" aria-label="Zobrazit profil hrače XY">
+                  <td>98</td>
+                  <td>Ú</td>
+                  <td class="text-left">Jméno Příjmení</td>
+                  <td>12</td>
+                  <td>3 214</td>
+                  <td>3</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>4</td>
+                </tr>
+                <tr class="clickable-row" data-href="" tabindex="0" role="button" aria-label="Zobrazit profil hrače XY">
+                  <td>98</td>
+                  <td>Ú</td>
+                  <td class="text-left">Jméno Příjmení</td>
+                  <td>12</td>
+                  <td>3 214</td>
+                  <td>3</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>4</td>
+                </tr>
+                <tr class="clickable-row" data-href="" tabindex="0" role="button" aria-label="Zobrazit profil hrače XY">
+                  <td>98</td>
+                  <td>Ú</td>
+                  <td class="text-left">Jméno Příjmení</td>
+                  <td>12</td>
+                  <td>3 214</td>
+                  <td>3</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('./components/footer.html') @@include('./components/scripts.html')
+    <script defer src="./js/tables.js"></script>
+  </body>
+</html>

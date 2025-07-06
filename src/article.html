@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include('./components/head-1.html') @@include('./components/fav.html')
+    <title>Website Title</title>
+    @@include('./components/head-2.html') @@include('./components/head-3.html')
+  </head>
+  <body>
+    @@include('./components/header.html')
+    <main id="main-content">
+      <div class="article-header">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="./images/content/img1.webp" />
+          <source media="(min-width: 992px)" srcset="" />
+          <source media="(min-width: 768px)" srcset="" />
+          <source media="(min-width: 576px)" srcset="" />
+          <img src="./images/content/img1.webp" alt="" loading="lazy" decoding="async" />
+        </picture>
+      </div>
+      <section class="padding-both">
+        <div class="container">
+          <article class="article">
+            <h1>Article title</h1>
+            <div class="article-details w-100">
+              <p class="mb-6"><span class="fc-accent uppercase">Preview</span> - <span>Pondělí</span></p>
+              <div class="divider"></div>
+            </div>
+            <p class="perex">
+              Jistě zažili hradečtí fotbalisté i klidnější koncovky zápasů. V zahajovacím kole nové sezony se postavili
+              Teplicím a dlouho to vypadalo, že vyrovnaný duel skončí dělbou bodů. Jenže přes skvěle fandících šest
+              tisíc diváků v Malšovické aréně zmrazil vlastní gól Čiháka na konci základní hrací doby. Situaci ale
+              předcházel chybně rozehraný roh, videorozhodčí sklářům branku neuznal a pak to přišlo. Pátá nastavená
+              minuta, tvrdá střela Spáčila a Votroci mohou slavit tři body po výhře 1:0!
+            </p>
+            <div class="divider"></div>
+            <h2>První poločas nabídl svižný fotbal, ale bez branek</h2>
+            <p>
+              V teplém nedělním večeru zahájil Hradec sezonu s chutí a aktivně. Už v první minutě získal dva rohové kopy
+              za sebou, jenže ani z jednoho nedokázal výrazněji zahrozit. Svižný a vyrovnaný fotbal začali Tepličtí
+              lehce naklánět na svou stranu po čtvrthodině hry, když přišly dva míče do vápna na Gninga. Zatímco první
+              hlavičku lapil Zadražil bez potíží „do teplých“, v 18. minutě mu ve vzduchu pomohl Čihák, jenž teplickému
+              útočníkovi nedal prostor.
+            </p>
+            <ul>
+              <li>Položka listu 1</li>
+              <li>Položka listu 2</li>
+              <li>Položka listu 3</li>
+            </ul>
+            <p>
+              Po občerstvovací pauze se dostal do zajímavé příležitosti Juliš, když na levé straně odvedl skvělou práci
+              Pilař a nabídl mu solidní střeleckou pozici, domácího útočníka ale zradil první dotek a následný pokus už
+              napálil jenom do obránce před sebou. Severočechům se s blížícím závěrem první půle nabízel prostor
+              především na krajích, zejména Cykalo byl v průnicích velmi aktivní, ale Zadražilovo čisté konto ohroženo
+              nebylo.
+            </p>
+            <img src="./images/content/img2.webp" alt="" />
+            <p>
+              V teplém nedělním večeru zahájil Hradec sezonu s chutí a aktivně. Už v první minutě získal dva rohové kopy
+              za sebou, jenže ani z jednoho nedokázal výrazněji zahrozit. Svižný a vyrovnaný fotbal začali Tepličtí
+              lehce naklánět na svou stranu po čtvrthodině hry, když přišly dva míče do vápna na Gninga. Zatímco první
+              hlavičku lapil Zadražil bez potíží „do teplých“, v 18. minutě mu ve vzduchu pomohl Čihák, jenž teplickému
+              útočníkovi nedal prostor.
+            </p>
+            <q> "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, dolores." </q>
+            <p>
+              V teplém nedělním večeru zahájil Hradec sezonu s chutí a aktivně. Už v první minutě získal dva rohové kopy
+              za sebou, jenže ani z jednoho nedokázal výrazněji zahrozit. Svižný a vyrovnaný fotbal začali Tepličtí
+              lehce naklánět na svou stranu po čtvrthodině hry, když přišly dva míče do vápna na Gninga. Zatímco první
+              hlavičku lapil Zadražil bez potíží „do teplých“, v 18. minutě mu ve vzduchu pomohl Čihák, jenž teplickému
+              útočníkovi nedal prostor.
+            </p>
+            <h2>První poločas nabídl svižný fotbal, ale bez branek</h2>
+            <img src="./images/content/img3.webp" alt="" />
+            <p>
+              Po občerstvovací pauze se dostal do zajímavé příležitosti Juliš, když na levé straně odvedl skvělou práci
+              Pilař a nabídl mu solidní střeleckou pozici, domácího útočníka ale zradil první dotek a následný pokus už
+              napálil jenom do obránce před sebou. Severočechům se s blížícím závěrem první půle nabízel prostor
+              především na krajích, zejména Cykalo byl v průnicích velmi aktivní, ale Zadražilovo čisté konto ohroženo
+              nebylo.
+            </p>
+          </article>
+          <div class="article-socials">
+            <p class="h3">Sdílet</p>
+            <div class="flex-row gap-4 flex-wrap align-center">
+              <a href=""><img src="./images/icons/facebook-social.svg" alt="Facebook icon" /></a>
+              <a href=""><img src="./images/icons/instagram-social.svg" alt="Instagram icon" /></a>
+              <a href=""><img src="./images/icons/x-social.svg" alt="X icon" /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="padding-bottom">
+        <div class="container">
+          <h2>Čtěte také</h2>
+          <div class="swiper swiper-articles">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">@@include('./components/card-article.html')</div>
+              <div class="swiper-slide">@@include('./components/card-article.html')</div>
+              <div class="swiper-slide">@@include('./components/card-article.html')</div>
+              <div class="swiper-slide">@@include('./components/card-article.html')</div>
+              <div class="swiper-slide">@@include('./components/card-article.html')</div>
+              <div class="swiper-slide">@@include('./components/card-article.html')</div>
+            </div>
+          </div>
+          <div class="swiper-navigation">
+            <img
+              class="swiper-arrow swiper-articles-arrow-next ml-auto"
+              src="./images/icons/swiper-arrow-left.svg"
+              alt="" />
+            <img class="swiper-arrow swiper-articles-arrow-prev" src="./images/icons/swiper-arrow-right.svg" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('./components/footer.html') @@include('./components/scripts.html')
+    <script src="./js/swipers.js"></script>
+  </body>
+</html>

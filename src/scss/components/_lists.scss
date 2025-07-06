@@ -1,0 +1,12 @@
+@use '../abstracts' as *;
+
+/* purgecss start ignore */
+
+ul {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 0;
+}
+
+/* purgecss end ignore */

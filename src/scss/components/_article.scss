@@ -1,22 +1,16 @@
 @use '../abstracts/' as *;
 
 article,
-.article {
+.article,
+.static-page {
+  --article-gap: 2.5rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
-  & > img {
-    width: 100%;
-  }
-
-  & > * {
-    margin-top: 1em;
-  }
-
-  & > :first-child {
-    margin-top: 0;
+  & > * + * {
+    margin-top: var(--article-gap);
   }
 
   h1,
@@ -29,17 +23,27 @@ article,
   }
 
   .perex {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
+    color: $white;
+    font-weight: 600;
   }
 
-  img {
+  img,
+  video {
     width: 100%;
+  }
+
+  iframe {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 
   ul,
   ol {
-    margin: 0;
     padding: 0;
+    list-style-type: disc;
     list-style-position: outside;
     padding-left: 1rem;
 
@@ -52,13 +56,175 @@ article,
     }
   }
 
-  q::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background-color: $primary;
+  .list-reset,
+  .grid-even-col {
+    list-style-type: none;
+
+    li {
+      margin: 0 !important;
+    }
   }
+
+  q {
+    width: 100%;
+    position: relative;
+    color: $white;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-style: italic;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $accent;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $accent;
+    }
+  }
+}
+
+article,
+.article {
+  img,
+  video {
+    width: 100%;
+  }
+}
+
+.article-header {
+  position: relative;
+
+  img {
+    width: 100%;
+    height: min(80vh, 600px);
+    object-fit: cover;
+
+    @media (width < 800px) {
+      height: 400px;
+    }
+  }
+}
+
+.report-header-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $size-10;
+  background-color: $bg-secondary;
+
+  .report-header-card_league-logo {
+    height: 1.5rem;
+  }
+
+  .report-header-card_score {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .report-header-card_teams-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: $size-6;
+    border: 1px solid $border-primary;
+
+    .report-header-card_team {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex: 1;
+      gap: $size-4;
+
+      &.is-home {
+        justify-content: end;
+
+        img {
+          order: 3;
+        }
+      }
+
+      .report-header-card_team-logo {
+        height: 64px;
+      }
+    }
+  }
+}
+
+.match-statistics_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--article-gap);
+
+  .match-statistics_item {
+    display: flex;
+    flex-direction: column;
+    gap: $size-4;
+  }
+}
+
+.article-socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: $size-6 0;
+  border-top: 1px solid $border-primary;
+  border-bottom: 1px solid $border-primary;
+  margin-top: $size-10;
+  gap: 1rem;
+}
+
+.reactions-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .reaction_item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &:not(:last-child) {
+      margin-bottom: var(--article-gap);
+    }
+
+    .reaction_trainer {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+
+      .reaction_trainer-img {
+        width: 80px;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 100rem;
+      }
+    }
+
+    .reaction_video {
+      width: min(100%, 500px);
+      max-width: 100%;
+      aspect-ratio: 16 / 9;
+    }
+  }
+}
+
+.img-height-fit {
+  max-height: 90vh;
+  width: auto;
+  object-fit: contain;
 }

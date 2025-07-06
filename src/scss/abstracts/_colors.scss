@@ -1,23 +1,64 @@
 // For use in the code base
-$primary: #0b1f3a;
-$accent: #ff0028;
-$text-body: #0b1f3a;
-$text-body-light: #6d7989;
-$gray: #e7e9ec;
-$stroke: #ced2d8;
-$stroke-dark: #24364e;
+$primary: #ffffff;
+$accent: #d8b36e;
+$text-body: #afafaf;
+$text-body-secondary: #e3e3e3;
+$gray: #e3e3e3;
+$bg-primary: #1b1b1b;
+$bg-secondary: #0e0e0e;
+$border-primary: #ced2d8;
+$border-secondary: #24364e;
+$red: #ff4242;
+$green: #06e775;
+$yellow: #ffd83a;
 $white: #ffffff;
 $black: #000000;
+$error: #ff4242;
+$success: #06e775;
 
 // For creating utility classes
 $colors: (
-  primary: #0b1f3a,
-  accent: #ff0028,
-  text-body: #0b1f3a,
-  text-body-light: #6d7989,
-  gray: #e7e9ec,
-  stroke: #ced2d8,
-  stroke-dark: #24364e,
+  primary: #ffffff,
+  accent: #d8b36e,
+  text-body: #afafaf,
+  text-body-secondary: #e3e3e3,
+  gray: #e3e3e3,
+  bg-primary: #1b1b1b,
+  bg-secondary: #0e0e0e,
+  border-primary: #ced2d8,
+  border-secondary: #24364e,
+  red: #ff4242,
+  green: #06e775,
+  yellow: #ffd83a,
   white: #ffffff,
-  black: #000000
+  black: #000000,
+  error: #ff4242,
+  success: #06e775
 );
+
+// Define the gradient mixin
+@mixin overlay-gradient($opacity-start: 0.95, $opacity-end: 0.5) {
+  background: #000000;
+  background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, $opacity-start) 0%, rgba(0, 0, 0, $opacity-end) 100%);
+  background: -moz-linear-gradient(0deg, rgba(0, 0, 0, $opacity-start) 0%, rgba(0, 0, 0, $opacity-end) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, $opacity-start) 0%, rgba(0, 0, 0, $opacity-end) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=0);
+}
+
+// Define the gradient mixin
+@mixin overlay-gradient-secondary($opacity-start: 0.95, $opacity-end: 0.5) {
+  background: #000000;
+  background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, $opacity-start) 0%, rgba(0, 0, 0, $opacity-end) 100%);
+  background: -moz-linear-gradient(0deg, rgba(0, 0, 0, $opacity-start) 0%, rgba(0, 0, 0, $opacity-end) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, $opacity-start) 0%, rgba(0, 0, 0, $opacity-end) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=0);
+}
+
+// Define the gradient mixin
+@mixin overlay-gradient-header($opacity-start: 0.95, $opacity-end: 0.5) {
+  background: #000000;
+  background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, $opacity-start) 0%, rgba(0, 0, 0, $opacity-end) 100%);
+  background: -moz-linear-gradient(0deg, rgba(0, 0, 0, $opacity-start) 0%, rgba(0, 0, 0, $opacity-end) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, $opacity-start) 0%, rgba(0, 0, 0, $opacity-end) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=0);
+}

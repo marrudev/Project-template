@@ -6,50 +6,40 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  color: $white;
+  gap: $size-3;
+  color: $black;
   background-color: $accent;
   font-family: $ff-base;
-  font-size: $fs-regular;
-  font-weight: $fw-bold;
+  font-size: 1rem;
+  font-weight: 700;
   line-height: 1;
   text-box-trim: trim-both;
   padding: 1rem 1.5rem;
   border: none;
+  border-radius: 1.5rem;
   cursor: pointer;
-  transition: $transition;
+  transition: all 0.3s ease-in-out;
 
   &:is(:hover, :focus) {
-    background-color: $primary;
-    color: $white;
+    background-color: $accent;
+    scale: 1.05;
+    text-decoration: none;
   }
 
   &.secondary {
-    background-color: $primary;
-
-    &:is(:hover, :focus) {
-      background-color: $accent;
-    }
-  }
-
-  &.outlined {
     background-color: transparent;
-    color: $accent;
     border: 1px solid $accent;
+    color: $accent;
 
     &:is(:hover, :focus) {
       background-color: $accent;
-      color: $white;
+      color: $black;
     }
   }
 
-  &.tab-button {
-    background-color: $accent;
-    color: $primary;
-
-    &:is(:hover, :focus, [aria-selected='true']) {
-      color: $white;
-      background-color: $primary;
-    }
+  &.small {
+    padding: 0.75rem 1.125rem;
+    font-size: 0.875rem;
   }
 }
 

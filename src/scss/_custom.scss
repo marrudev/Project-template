@@ -3,82 +3,98 @@
 
 /* purgecss start ignore */
 
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 1000;
+
+  &:is(:focus) {
+    top: 1rem;
+  }
+}
+
 .divider {
   width: 100%;
   height: 1px;
-  background-color: $stroke;
+  background-color: $border-primary;
 
   &.secondary {
-    background-color: $primary;
+    background-color: $accent;
   }
 }
 
-// Pagination
+.map {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
 
-.pagination {
+.max-w-50 {
+  max-width: 50rem;
+}
+
+.icon-regular {
+  height: 1.25rem;
+}
+
+.icon-small {
+  height: 1rem;
+}
+
+// Socials
+
+.socials-icon {
+  transition: all 0.3s ease-in-out;
+
+  &:is(:hover, :focus) {
+    transform: scale(1.1);
+  }
+}
+
+// Filters
+
+.filters-wrapper {
   display: flex;
   flex-direction: row;
+  align-items: stretch;
+  justify-content: end;
   flex-wrap: wrap;
-  gap: 0.25rem;
+  gap: $size-4;
+  margin-bottom: 2.5rem;
+
+  @media screen and (max-width: 800px) {
+    justify-content: start;
+  }
+  @media screen and (max-width: 450px) {
+    > * {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  select {
+    max-width: max-content;
+
+    @media screen and (max-width: 450px) {
+      max-width: 100%;
+    }
+  }
+}
+
+// Partners
+
+.partner-hp-wrapper {
+  height: 80px;
+  display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  align-items: center;
 
-  a {
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    border: 1px solid $accent;
-    color: $accent;
-    border-radius: 2rem;
-    border-bottom-left-radius: 0;
-
-    &:is(:hover, :focus) {
-      background-color: $accent;
-      color: $white;
-      text-decoration: none;
-    }
-  }
-
-  a.active {
-    background-color: $accent;
-    color: $white;
-    font-weight: 700;
-  }
-}
-
-// Swipers
-
-.swiper-button-disabled {
-  opacity: 0.35;
-  pointer-events: none;
-}
-
-.swiper {
-  width: 100%;
-  height: 100%;
-
-  .swiper-pagination {
+  img {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    position: relative;
-    margin-bottom: 1rem;
-    inset: 0;
-
-    .swiper-pagination-bullet {
-      width: 0.75rem;
-      height: 0.35rem;
-      border-radius: 0;
-      background-color: $text-body;
-
-      &.swiper-pagination-bullet-active {
-        background-color: $accent;
-      }
-    }
+    max-width: 160px;
+    height: 100%;
+    object-fit: contain;
+    user-select: none;
   }
 }
 

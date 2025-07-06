@@ -2,4 +2,328 @@
 
 /* purgecss start ignore */
 
+// Card img wrappers
+
+.gallery-img-wrapper,
+.article-img-wrapper {
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+  }
+
+  &:is(:hover, :focus) {
+    text-decoration: none;
+
+    img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.article-img-wrapper {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+}
+
+.gallery-img-wrapper {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+}
+
+// Partner card
+
+.card-partner {
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $size-10;
+  border: 1px solid $border-primary;
+
+  .partner-logo {
+    width: 100%;
+    height: 100%;
+    max-height: 120px;
+    object-fit: contain;
+    transition: all 0.25s ease-in-out;
+  }
+
+  &:is(:hover, :focus) {
+    text-decoration: none;
+
+    .partner-logo {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Card linktree
+
+.card-linktree {
+  min-height: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $size-10 $size-6;
+  border: 1px solid $border-primary;
+  text-align: center;
+  transition: all 0.15s ease-in-out;
+
+  &:is(:hover, :focus) {
+    text-decoration: none;
+    border: 1px solid $accent;
+  }
+
+  .h2 {
+    font-size: 2rem;
+    margin: 0;
+    z-index: 1;
+  }
+
+  &.with-img {
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @include overlay-gradient();
+      z-index: 0;
+    }
+  }
+}
+
+// Card article & gallery
+
+.card-article,
+.card-gallery {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: $size-4;
+
+  &:is(:hover, :focus) {
+    text-decoration: none;
+
+    img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.card-article_header,
+.card-gallery_header {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: $primary;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+// Card fanshop
+
+.card-fanshop {
+  display: flex;
+  flex-direction: column;
+  gap: $size-6;
+
+  .card-fanshop_header {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $primary;
+  }
+
+  .card-fanshop_price {
+    font-size: 1.5rem;
+    font-family: $ff-accent;
+    line-height: 1;
+  }
+}
+
+// Card match
+
+.card-match {
+  display: flex;
+  flex-direction: column;
+  gap: $size-4;
+  background: $bg-secondary;
+  padding: $size-6;
+
+  .card-match_header {
+    img {
+      height: 1.5rem;
+    }
+  }
+
+  .card-match_teams {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: $size-4;
+    border: 1px solid $border-primary;
+
+    .card-match_team-logo {
+      width: 64px;
+      aspect-ratio: 1;
+      object-fit: contain;
+    }
+
+    .card-match_teams-content {
+      display: flex;
+      flex-direction: row;
+      gap: $size-2;
+    }
+  }
+
+  .card-match_buttons-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $size-2;
+
+    li {
+      width: fit-content;
+      max-width: max-content;
+    }
+  }
+}
+
+// Card leadership board
+
+.card-leadership {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $border-primary;
+  padding: $size-10 $size-6;
+  gap: $size-4;
+  container-type: inline-size;
+
+  .card-leadership_header {
+    display: flex;
+    flex-direction: row;
+    gap: $size-4;
+
+    @container (max-width: 320px) {
+      flex-direction: column;
+    }
+
+    img {
+      width: 80px;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 100rem;
+      align-self: start;
+      user-select: none;
+    }
+  }
+
+  .h4 {
+    font-family: $ff-base;
+    line-height: 1.25;
+  }
+}
+
+// Card roster
+
+.card-roster {
+  display: flex;
+  flex-direction: column;
+  gap: $size-6;
+
+  &:is(:hover, :focus) {
+    text-decoration: none;
+
+    .player-img-wrapper {
+      .player-photo {
+        opacity: 0;
+      }
+
+      .player-photo-active {
+        opacity: 1;
+        scale: 1.15;
+      }
+    }
+  }
+
+  // No active pose img = basic img scales on hover instead
+  &:not(:has(.player-photo-active)) {
+    &:is(:hover, :focus) {
+      .player-photo {
+        opacity: 1;
+        scale: 1.15;
+      }
+    }
+  }
+
+  .player-img-wrapper {
+    display: flex;
+    position: relative;
+    background-color: $bg-secondary;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      object-fit: contain;
+      transition: all 0.25s ease-in-out;
+    }
+
+    .player-photo {
+      position: relative;
+      opacity: 100%;
+      margin-inline: auto;
+    }
+
+    .player-photo-active {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 3;
+      opacity: 0;
+    }
+
+    .team-logo {
+      width: 48px;
+      height: 48px;
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      z-index: 5;
+    }
+
+    .position {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      z-index: 5;
+    }
+  }
+}
+
+// Player profile
+
+.player-profile-img-wrapper {
+  background-color: $bg-secondary;
+  display: flex;
+  justify-content: center;
+}
 /* purgecss end ignore */

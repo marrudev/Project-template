@@ -19,7 +19,7 @@ async function prettierDist() {
 // File include
 function includeHTML() {
   console.log('Running HTML include...');
-  return src(['./src/**/*.html', '!./src/components/*.html', '!./src/templates/*.html'])
+  return src(['./src/**/*.html', '!./src/components/**/*.html', '!./src/templates/**/*.html'])
     .pipe(
       fileinclude({
         prefix: '@@',

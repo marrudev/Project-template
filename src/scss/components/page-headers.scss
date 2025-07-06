@@ -1,0 +1,51 @@
+@use '../abstracts' as *;
+
+/* purgecss start ignore */
+
+.page-header {
+  margin-top: $nav-height;
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: $size-20 0;
+  overflow: hidden;
+  text-align: center;
+  background: $bg-secondary;
+
+  /* &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include overlay-gradient-header();
+  } */
+
+  @media (width < 800px) {
+    min-height: 350px;
+  }
+
+  @media (width < 580px) {
+    min-height: 300px;
+  }
+
+  .container {
+    z-index: 10;
+  }
+
+  .page-header_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    user-select: none;
+  }
+}
+
+/* purgecss end ignore */

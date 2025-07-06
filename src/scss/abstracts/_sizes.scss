@@ -1,45 +1,35 @@
 // Use in code base
 $size-0: 0;
-$size-1: 0.25rem;
-$size-2: 0.5rem;
-$size-3: 0.75rem;
-$size-4: 1rem;
-$size-5: 1.25rem;
-$size-6: 1.5rem;
+$size-1: clamp(0.25rem, calc(0vw + 0.25rem), 0.25rem);
+$size-2: clamp(0.5rem, calc(0vw + 0.5rem), 0.5rem);
+$size-3: clamp(0.75rem, calc(0vw + 0.75rem), 0.75rem);
+$size-4: clamp(0.75rem, calc(0.37vw + 0.68rem), 1rem);
+$size-5: clamp(1rem, calc(0.37vw + 0.93rem), 1.25rem);
+$size-6: clamp(1.25rem, calc(0.37vw + 1.18rem), 1.5rem);
 $size-7: 1.75rem;
-$size-8: 2rem;
+$size-8: clamp(1.25rem, calc(1.11vw + 1.03rem), 2rem);
 $size-9: 2.25rem;
-$size-10: 2.5rem;
+$size-10: clamp(1.75rem, calc(1.11vw + 1.53rem), 2.5rem);
 $size-11: 2.75rem;
-$size-12: 3rem;
+$size-12: clamp(2rem, calc(1.48vw + 1.7rem), 3rem);
 $size-13: 3.25rem;
 $size-14: 3.5rem;
 $size-15: 3.75rem;
-$size-16: 4rem;
+$size-16: clamp(2.75rem, calc(1.85vw + 2.38rem), 4rem);
 $size-17: 4.25rem;
 $size-18: 4.5rem;
 $size-19: 4.75rem;
-$size-20: 4.5rem;
-$size-11: 2.75rem;
-$size-12: 3rem;
-$size-13: 3.25rem;
-$size-14: 3.5rem;
-$size-15: 3.75rem;
-$size-16: 4rem;
-$size-17: 4.25rem;
-$size-18: 4.5rem;
-$size-19: 4.75rem;
-$size-20: 5rem;
+$size-20: clamp(3rem, calc(2.96vw + 2.41rem), 5rem);
 $size-21: 5.25rem;
 $size-22: 5.5rem;
 $size-23: 5.75rem;
 $size-24: 6rem;
-$size-25: 6.25rem;
+$size-25: clamp(4rem, calc(3.33vw + 3.33rem), 6.25rem);
 $size-26: 6.5rem;
 $size-27: 6.75rem;
 $size-28: 7rem;
 $size-29: 7.25rem;
-$size-30: 7.5rem;
+$size-30: clamp(5rem, calc(3.7vw + 4.26rem), 7.5rem);
 $size-31: 7.75rem;
 $size-32: 8rem;
 $size-33: 8.25rem;
@@ -49,41 +39,42 @@ $size-36: 9rem;
 $size-37: 9.25rem;
 $size-38: 9.5rem;
 $size-39: 9.75rem;
-$size-40: 10rem;
+$size-40: clamp(6.25rem, calc(5.56vw + 5.14rem), 10rem);
+$size-50: clamp(7.5rem, calc(7.41vw + 6.02rem), 12.5rem);
 
 // For utility classes
 $sizes: (
   0: 0,
   1: 0.25rem,
   2: 0.5rem,
-  3: 0.75rem,
-  4: 1rem,
-  5: 1.25rem,
-  6: 1.5rem,
+  3: clamp(0.75rem, calc(0vw + 0.75rem), 0.75rem),
+  4: clamp(0.75rem, calc(0.37vw + 0.68rem), 1rem),
+  5: clamp(1rem, calc(0.37vw + 0.93rem), 1.25rem),
+  6: clamp(1.25rem, calc(0.37vw + 1.18rem), 1.5rem),
   7: 1.75rem,
-  8: 2rem,
+  8: clamp(1.25rem, calc(1.11vw + 1.03rem), 2rem),
   9: 2.25rem,
-  10: 2.5rem,
+  10: clamp(1.75rem, calc(1.11vw + 1.53rem), 2.5rem),
   11: 2.75rem,
-  12: 3rem,
+  12: clamp(2rem, calc(1.48vw + 1.7rem), 3rem),
   13: 3.25rem,
   14: 3.5rem,
   15: 3.75rem,
-  16: 4rem,
+  16: clamp(2.75rem, calc(1.85vw + 2.38rem), 4rem),
   17: 4.25rem,
   18: 4.5rem,
   19: 4.75rem,
-  20: 5rem,
+  20: clamp(3rem, calc(2.96vw + 2.41rem), 5rem),
   21: 5.25rem,
   22: 5.5rem,
   23: 5.75rem,
   24: 6rem,
-  25: 6.25rem,
+  25: clamp(4rem, calc(3.33vw + 3.33rem), 6.25rem),
   26: 6.5rem,
   27: 6.75rem,
   28: 7rem,
   29: 7.25rem,
-  30: 7.5rem,
+  30: clamp(5rem, calc(3.7vw + 4.26rem), 7.5rem),
   31: 7.75rem,
   32: 8rem,
   33: 8.25rem,
@@ -93,5 +84,6 @@ $sizes: (
   37: 9.25rem,
   38: 9.5rem,
   39: 9.75rem,
-  40: 10rem
+  40: clamp(6.25rem, calc(5.56vw + 5.14rem), 10rem),
+  50: clamp(7.5rem, calc(7.41vw + 6.02rem), 12.5rem)
 );

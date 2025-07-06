@@ -1,21 +1,40 @@
 @use '../abstracts/' as *;
 
-.table-w {
+.table-wrapper {
   width: 100%;
   overflow: auto;
 }
 
 table {
+  --table-padding: 0.75rem 1rem;
   width: 100%;
   border-collapse: collapse;
+  text-align: center;
+
+  .cell-100 {
+    width: 100%;
+  }
+
+  .cell_team,
+  .cell-player {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: max-content;
+
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
 
   th {
-    font-family: $ff-accent;
-    font-size: 0.85rem;
-    text-align: left;
+    font-family: $ff-base;
+    font-size: 1rem;
     color: $white;
-    background: $accent;
-    padding: 0.75rem clamp(0.5rem, 0.3333rem + 0.5556vw, 0.75rem);
+    background: $bg-secondary;
+    border-bottom: 1px solid $border-primary;
+    padding: var(--table-padding);
 
     &.is-sortable {
       position: relative;
@@ -57,46 +76,48 @@ table {
 
   tr {
     td {
-      /* text-align: center; */
-      border-bottom: 1px solid $stroke;
-      padding: 0.75rem clamp(0.5rem, 0.3333rem + 0.5556vw, 0.75rem);
+      border-bottom: 1px solid $border-primary;
+      padding: var(--table-padding);
     }
 
-    .flex {
-      width: max-content;
-    }
-  }
-
-  tr.row-clickable:hover td {
-    background-color: $accent;
-    cursor: pointer;
-  }
-}
-
-tr.active {
-  td {
-    border-bottom: 1px solid $accent;
-  }
-
-  & ~ tr:last-child {
-    border-bottom: 1px solid $accent;
-  }
-}
-
-// Static page
-
-.static-text-main {
-  table {
-    th {
-      text-align: left;
+    &.row-clickable:hover td {
+      background-color: $accent;
+      cursor: pointer;
     }
 
-    tr {
+    &.active {
       td {
-        text-align: left;
+        border-bottom: 1px solid $accent;
       }
     }
   }
+}
+
+.table_team {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .table_team-logo {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+// Custom table
+
+.custom-table {
+  --table-padding: 1rem 1rem;
+  th,
+  td {
+    border: 1px solid $border-primary;
+  }
+}
+
+// Table statistics
+
+.table-statistics {
+  white-space: nowrap;
 }
 
 // Border collapse

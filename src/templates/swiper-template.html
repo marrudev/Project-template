@@ -1,0 +1,86 @@
+<div class="swiper swiper-xy">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">@@include('./components/card-article.html')</div>
+    <div class="swiper-slide">@@include('./components/card-article.html')</div>
+    <div class="swiper-slide">@@include('./components/card-article.html')</div>
+    <div class="swiper-slide">@@include('./components/card-article.html')</div>
+    <div class="swiper-slide">@@include('./components/card-article.html')</div>
+    <div class="swiper-slide">@@include('./components/card-article.html')</div>
+  </div>
+</div>
+<div class="swiper-navigation">
+  <img
+    class="swiper-arrow swiperxy-arrow-next ml-auto"
+    src="./images/icons/swiper-arrow-left.svg"
+    alt="Swiper navigační ikona" />
+  <img
+    class="swiper-arrow swiperxy-arrow-prev"
+    src="./images/icons/swiper-arrow-right.svg"
+    alt="Swiper navigační ikona" />
+</div>
+
+<script defer>
+  var swiper = new Swiper('.swiper-xy', {
+    slidesPerView: 1.25,
+    spaceBetween: 24,
+
+    navigation: {
+      nextEl: '.swiperxy-arrow-prev',
+      prevEl: '.swiperxy-arrow-next'
+    },
+
+    breakpoints: {
+      300: {
+        slidesPerView: 1.25,
+        spaceBetween: 16
+      },
+      500: {
+        slidesPerView: 2.25,
+        spaceBetween: 24
+      },
+      850: {
+        slidesPerView: 3.25,
+        spaceBetween: 24
+      },
+      1100: {
+        slidesPerView: 4.25,
+        spaceBetween: 24
+      }
+    }
+  });
+</script>
+
+<script defer>
+  var swiper = new Swiper('.swiper-autoplay', {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    loop: true,
+    speed: 350,
+    allowTouchMove: true,
+    snapOnRelease: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: true
+    },
+
+    navigation: {
+      nextEl: '.swiper-autoplay-arrow-prev',
+      prevEl: '.swiper-autoplay-arrow-next'
+    },
+
+    breakpoints: {
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 16
+      },
+      700: {
+        slidesPerView: 3,
+        spaceBetween: 24
+      },
+      1000: {
+        slidesPerView: 4,
+        spaceBetween: 24
+      }
+    }
+  });
+</script>

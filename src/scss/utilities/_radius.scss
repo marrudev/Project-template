@@ -1,177 +1,177 @@
 @use '../abstracts/' as *;
 
-.rounded-none {
+.radius-none {
   border-radius: 0;
 }
 
-.rounded-full {
+.radius-full {
   border-radius: 100%;
 }
 
 // Small
 
-.rounded-sm {
-  border-radius: $border-radius-sm;
+.radius-s {
+  border-radius: $border-radius-s;
 }
 
-.rounded-t-sm {
-  border-top-left-radius: $border-radius-sm;
-  border-top-right-radius: $border-radius-sm;
+.radius-t-s {
+  border-top-left-radius: $border-radius-s;
+  border-top-right-radius: $border-radius-s;
 }
 
-.rounded-r-sm {
-  border-top-right-radius: $border-radius-sm;
-  border-bottom-right-radius: $border-radius-sm;
+.radius-r-s {
+  border-top-right-radius: $border-radius-s;
+  border-bottom-right-radius: $border-radius-s;
 }
 
-.rounded-b-sm {
-  border-bottom-right-radius: $border-radius-sm;
-  border-bottom-left-radius: $border-radius-sm;
+.radius-b-s {
+  border-bottom-right-radius: $border-radius-s;
+  border-bottom-left-radius: $border-radius-s;
 }
 
-.rounded-l-sm {
-  border-bottom-left-radius: $border-radius-sm;
-  border-top-left-radius: $border-radius-sm;
+.radius-l-s {
+  border-bottom-left-radius: $border-radius-s;
+  border-top-left-radius: $border-radius-s;
 }
 
-.rounded-tl-sm {
-  border-top-left-radius: $border-radius-sm;
+.radius-tl-s {
+  border-top-left-radius: $border-radius-s;
 }
 
-.rounded-tr-sm {
-  border-top-right-radius: $border-radius-sm;
+.radius-tr-s {
+  border-top-right-radius: $border-radius-s;
 }
 
-.rounded-br-sm {
-  border-bottom-right-radius: $border-radius-sm;
+.radius-br-s {
+  border-bottom-right-radius: $border-radius-s;
 }
 
-.rounded-bl-sm {
-  border-bottom-left-radius: $border-radius-sm;
+.radius-bl-s {
+  border-bottom-left-radius: $border-radius-s;
 }
 
 // Regular
 
-.rounded {
-  border-radius: $border-radius;
+.radius-r {
+  border-radius: $border-radius-r;
 }
 
-.rounded-t {
-  border-top-left-radius: $border-radius;
-  border-top-right-radius: $border-radius;
+.radius-t-r {
+  border-top-left-radius: $border-radius-r;
+  border-top-right-radius: $border-radius-r;
 }
 
-.rounded-r {
-  border-top-right-radius: $border-radius;
-  border-bottom-right-radius: $border-radius;
+.radius-r-r {
+  border-top-right-radius: $border-radius-r;
+  border-bottom-right-radius: $border-radius-r;
 }
 
-.rounded-b {
-  border-bottom-right-radius: $border-radius;
-  border-bottom-left-radius: $border-radius;
+.radius-b-r {
+  border-bottom-right-radius: $border-radius-r;
+  border-bottom-left-radius: $border-radius-r;
 }
 
-.rounded-l {
-  border-bottom-left-radius: $border-radius;
-  border-top-left-radius: $border-radius;
+.radius-l-r {
+  border-bottom-left-radius: $border-radius-r;
+  border-top-left-radius: $border-radius-r;
 }
 
-.rounded-tl {
-  border-top-left-radius: $border-radius;
+.radius-tl-r {
+  border-top-left-radius: $border-radius-r;
 }
 
-.rounded-tr {
-  border-top-right-radius: $border-radius;
+.radius-tr-r {
+  border-top-right-radius: $border-radius-r;
 }
 
-.rounded-br {
-  border-bottom-right-radius: $border-radius;
+.radius-br-r {
+  border-bottom-right-radius: $border-radius-r;
 }
 
-.rounded-bl {
-  border-bottom-left-radius: $border-radius;
+.radius-bl-r {
+  border-bottom-left-radius: $border-radius-r;
 }
 
 // Medium
 
-.rounded-md {
-  border-radius: $border-radius-md;
+.radius-m {
+  border-radius: $border-radius-m;
 }
 
-.rounded-t-md {
-  border-top-left-radius: $border-radius-md;
-  border-top-right-radius: $border-radius-md;
+.radius-t-m {
+  border-top-left-radius: $border-radius-m;
+  border-top-right-radius: $border-radius-m;
 }
 
-.rounded-r-md {
-  border-top-right-radius: $border-radius-md;
-  border-bottom-right-radius: $border-radius-md;
+.radius-r-m {
+  border-top-right-radius: $border-radius-m;
+  border-bottom-right-radius: $border-radius-m;
 }
 
-.rounded-b-md {
-  border-bottom-right-radius: $border-radius-md;
-  border-bottom-left-radius: $border-radius-md;
+.radius-b-m {
+  border-bottom-right-radius: $border-radius-m;
+  border-bottom-left-radius: $border-radius-m;
 }
 
-.rounded-l-md {
-  border-bottom-left-radius: $border-radius-md;
-  border-top-left-radius: $border-radius-md;
+.radius-l-m {
+  border-bottom-left-radius: $border-radius-m;
+  border-top-left-radius: $border-radius-m;
 }
 
-.rounded-tl-md {
-  border-top-left-radius: $border-radius-md;
+.radius-tl-m {
+  border-top-left-radius: $border-radius-m;
 }
 
-.rounded-tr-md {
-  border-top-right-radius: $border-radius-md;
+.radius-tr-m {
+  border-top-right-radius: $border-radius-m;
 }
 
-.rounded-br-md {
-  border-bottom-right-radius: $border-radius-md;
+.radius-br-m {
+  border-bottom-right-radius: $border-radius-m;
 }
 
-.rounded-bl-md {
-  border-bottom-left-radius: $border-radius-md;
+.radius-bl-m {
+  border-bottom-left-radius: $border-radius-m;
 }
 
 // Large
 
-.rounded-lg {
-  border-radius: $border-radius-lg;
+.radius-l {
+  border-radius: $border-radius-l;
 }
 
-.rounded-t-lg {
-  border-top-left-radius: $border-radius-lg;
-  border-top-right-radius: $border-radius-lg;
+.radius-t-l {
+  border-top-left-radius: $border-radius-l;
+  border-top-right-radius: $border-radius-l;
 }
 
-.rounded-r-lg {
-  border-top-right-radius: $border-radius-lg;
-  border-bottom-right-radius: $border-radius-lg;
+.radius-r-l {
+  border-top-right-radius: $border-radius-l;
+  border-bottom-right-radius: $border-radius-l;
 }
 
-.rounded-b-lg {
-  border-bottom-right-radius: $border-radius-lg;
-  border-bottom-left-radius: $border-radius-lg;
+.radius-b-l {
+  border-bottom-right-radius: $border-radius-l;
+  border-bottom-left-radius: $border-radius-l;
 }
 
-.rounded-l-lg {
-  border-bottom-left-radius: $border-radius-lg;
-  border-top-left-radius: $border-radius-lg;
+.radius-l-l {
+  border-bottom-left-radius: $border-radius-l;
+  border-top-left-radius: $border-radius-l;
 }
 
-.rounded-tl-lg {
-  border-top-left-radius: $border-radius-lg;
+.radius-tl-l {
+  border-top-left-radius: $border-radius-l;
 }
 
-.rounded-tr-lg {
-  border-top-right-radius: $border-radius-lg;
+.radius-tr-l {
+  border-top-right-radius: $border-radius-l;
 }
 
-.rounded-br-lg {
-  border-bottom-right-radius: $border-radius-lg;
+.radius-br-l {
+  border-bottom-right-radius: $border-radius-l;
 }
 
-.rounded-bl-lg {
-  border-bottom-left-radius: $border-radius-lg;
+.radius-bl-l {
+  border-bottom-left-radius: $border-radius-l;
 }

@@ -15,6 +15,7 @@
 html,
 body {
   hanging-punctuation: first last;
+  background-color: $black;
 }
 
 body {
@@ -86,6 +87,11 @@ select {
   font: inherit;
 }
 
+button {
+  /* Reset all inherited and default styles */
+  all: unset;
+}
+
 /* Base animations and transitions for people without any preferences */
 @media (prefers-reduced-motion: no-preference) {
   :has(:target) {
@@ -108,6 +114,12 @@ select {
   html {
     scroll-behavior: initial;
   }
+}
+
+/* Add focus styles for accessibility */
+*:focus-visible {
+  outline: 2px dashed $accent;
+  outline-offset: 4px;
 }
 
 /* purgecss end ignore */

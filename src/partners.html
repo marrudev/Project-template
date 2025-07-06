@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include('./components/head-1.html') @@include('./components/fav.html')
+    <title>Website Title</title>
+    @@include('./components/head-2.html') @@include('./components/head-3.html')
+  </head>
+  <body>
+    @@include('./components/header.html')
+    <main id="main-content">
+      <div class="page-header">
+        <div class="container">
+          <h1>Partneři</h1>
+        </div>
+        <div class="page-header-line"></div>
+      </div>
+      <section class="padding-both">
+        <div class="container">
+          <div class="content-wrapper flex-col">
+            <p class="mb-20 max-w-50">
+              Děkujeme všem našim partnerům za jejich stálou podporu, která je klíčová pro chod našeho klubu. Vaše
+              angažovanost a finanční příspěvky nám umožňují rozvíjet nejen naši sportovní činnost, ale i komunitní
+              projekty, na kterých záleží nám všem. Srdečně zveme nové partnery, aby se k nám připojili. (Placeholder
+              text).
+            </p>
+            <h2 class="mb-6">Generální partneři</h2>
+            <div class="grid-even-col col-4 even-gap-4 mb-10">
+              @@include('./components/card-partner.html') @@include('./components/card-partner.html')
+              @@include('./components/card-partner.html')
+            </div>
+            <h2 class="mb-6">Hlavní partneři</h2>
+            <div class="grid-even-col col-4 even-gap-4 mb-10">
+              @@include('./components/card-partner.html') @@include('./components/card-partner.html')
+              @@include('./components/card-partner.html') @@include('./components/card-partner.html')
+              @@include('./components/card-partner.html')
+            </div>
+            <h2 class="mb-6">Mediální partneři</h2>
+            <div class="grid-even-col col-4 even-gap-4 mb-10">
+              @@include('./components/card-partner.html') @@include('./components/card-partner.html')
+              @@include('./components/card-partner.html')
+            </div>
+            <h2 class="mb-6">Partneři</h2>
+            <div class="grid-even-col col-4 even-gap-4">
+              @@include('./components/card-partner.html') @@include('./components/card-partner.html')
+              @@include('./components/card-partner.html') @@include('./components/card-partner.html')
+              @@include('./components/card-partner.html') @@include('./components/card-partner.html')
+              @@include('./components/card-partner.html') @@include('./components/card-partner.html')
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('./components/footer.html') @@include('./components/scripts.html')
+  </body>
+</html>

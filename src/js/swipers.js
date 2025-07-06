@@ -1,0 +1,57 @@
+var swiper = new Swiper('.swiper-articles', {
+  slidesPerView: 1.25,
+  spaceBetween: 24,
+
+  navigation: {
+    nextEl: '.swiper-articles-arrow-prev',
+    prevEl: '.swiper-articles-arrow-next'
+  },
+
+  breakpoints: {
+    300: {
+      slidesPerView: 1.25,
+      spaceBetween: 16
+    },
+    500: {
+      slidesPerView: 2.25,
+      spaceBetween: 24
+    },
+    850: {
+      slidesPerView: 3.25,
+      spaceBetween: 24
+    },
+    1100: {
+      slidesPerView: 4.25,
+      spaceBetween: 24
+    }
+  }
+});
+
+var swiper = new Swiper('.swiper-gallery', {
+  slidesPerView: 1.25,
+  spaceBetween: 24,
+
+  navigation: {
+    nextEl: '.swiper-gallery-arrow-prev',
+    prevEl: '.swiper-gallery-arrow-next'
+  },
+
+  breakpoints: {
+    300: {
+      slidesPerView: 1.25,
+      spaceBetween: 16
+    },
+    500: {
+      slidesPerView: 2.25,
+      spaceBetween: 24
+    },
+    850: {
+      slidesPerView: 3.25,
+      spaceBetween: 24
+    },
+    1100: {
+      slidesPerView: 4.25,
+      spaceBetween: 24
+    }
+  }
+});
