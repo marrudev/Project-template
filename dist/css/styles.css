@@ -1570,6 +1570,62 @@ article video,
   max-width: max-content;
 }
 
+.card-match-hp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: clamp(1.25rem, 0.37vw + 1.18rem, 1.5rem);
+  padding: clamp(1.25rem, 0.37vw + 1.18rem, 1.5rem) clamp(0.75rem, 0.37vw + 0.68rem, 1rem);
+  background: #0e0e0e;
+}
+.card-match-hp .card-match-hp_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: clamp(0.25rem, 0vw + 0.25rem, 0.25rem);
+  text-align: center;
+}
+.card-match-hp .card-match-hp_teams {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: clamp(1.25rem, 0.37vw + 1.18rem, 1.5rem);
+  border: 1px solid #ced2d8;
+}
+.card-match-hp .card-match-hp_teams .card-match-hp_team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: clamp(0.5rem, 0vw + 0.5rem, 0.5rem);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.card-match-hp .card-match-hp_teams .card-match-hp_team img {
+  width: 64px;
+  aspect-ratio: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .card-leadership {
   display: -webkit-box;
   display: -ms-flexbox;

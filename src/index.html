@@ -18,56 +18,7 @@
       </section>
       <section>
         <div class="container">
-          <!-- Tabs -->
-          <div class="tabs-container w-full">
-            <ul class="tabs-list" role="tablist">
-              <li role="presentation">
-                <button
-                  id="tab-1"
-                  class="button tab-button"
-                  role="tab"
-                  aria-selected="true"
-                  aria-controls="panel-1"
-                  data-target="#panel-1"
-                  tabindex="0">
-                  2023
-                </button>
-              </li>
-              <li role="presentation">
-                <button
-                  id="tab-2"
-                  class="button tab-button"
-                  role="tab"
-                  aria-selected="false"
-                  aria-controls="panel-2"
-                  data-target="#panel-2"
-                  tabindex="-1">
-                  2022
-                </button>
-              </li>
-            </ul>
-            <div class="tabs_panels">
-              <!-- Panel 1 -->
-              <div id="panel-1" class="tab-content" role="tabpanel" aria-labelledby="tab-1" tabindex="0">
-                <article>
-                  <h2>Header Tab 1</h2>
-                  <h3>Header 2</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam rhoncus aliquam metus. ...</p>
-                </article>
-              </div>
-              <!-- Panel 2 -->
-              <div id="panel-2" class="tab-content" role="tabpanel" aria-labelledby="tab-2" tabindex="0" hidden>
-                <article>
-                  <h2>Header Tab 2</h2>
-                  <h3>Header 2</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam rhoncus aliquam metus. ...</p>
-                </article>
-              </div>
-            </div>
-          </div>
-
-          <!-- Load tabs script -->
-          <script async src="./js/tabs.js"></script>
+          <div class="grid-even-col col-3 gap-6">@@include('./components/card-match-hp.html')</div>
         </div>
       </section>
     </main>

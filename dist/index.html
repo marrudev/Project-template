@@ -120,56 +120,62 @@
       </section>
       <section>
         <div class="container">
-          <!-- Tabs -->
-          <div class="tabs-container w-full">
-            <ul class="tabs-list" role="tablist">
-              <li role="presentation">
-                <button
-                  id="tab-1"
-                  class="button tab-button"
-                  role="tab"
-                  aria-selected="true"
-                  aria-controls="panel-1"
-                  data-target="#panel-1"
-                  tabindex="0">
-                  2023
-                </button>
-              </li>
-              <li role="presentation">
-                <button
-                  id="tab-2"
-                  class="button tab-button"
-                  role="tab"
-                  aria-selected="false"
-                  aria-controls="panel-2"
-                  data-target="#panel-2"
-                  tabindex="-1">
-                  2022
-                </button>
-              </li>
-            </ul>
-            <div class="tabs_panels">
-              <!-- Panel 1 -->
-              <div id="panel-1" class="tab-content" role="tabpanel" aria-labelledby="tab-1" tabindex="0">
-                <article>
-                  <h2>Header Tab 1</h2>
-                  <h3>Header 2</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam rhoncus aliquam metus. ...</p>
-                </article>
-              </div>
-              <!-- Panel 2 -->
-              <div id="panel-2" class="tab-content" role="tabpanel" aria-labelledby="tab-2" tabindex="0" hidden>
-                <article>
-                  <h2>Header Tab 2</h2>
-                  <h3>Header 2</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam rhoncus aliquam metus. ...</p>
-                </article>
+          <div class="grid-even-col col-3 gap-6">
+            <div class="flex-col">
+              <p class="fc-white mb-2">Poslední zápas</p>
+              <div class="card-match-hp">
+                <div class="card-match-hp_header">
+                  <p class="fs-small fc-white fw-700">Chance liga - 13. kolo</p>
+                  <p class="fs-small"><span>Sobota 21.5.2024</span> | <span>16:00</span></p>
+                </div>
+                <div class="card-match-hp_teams">
+                  <div class="card-match-hp_team team-1">
+                    <img src="./images/logos/teams/sparta.png" alt="" />
+                    <p>FC SPA</p>
+                  </div>
+                  <div class="match-hp-score">2:4</div>
+                  <div class="card-match-hp_team team-2">
+                    <img src="./images/logos/teams/hradec.png" alt="" />
+                    <p>FC HK</p>
+                  </div>
+                </div>
+                <nav class="nav-list" aria-label="Karta utkání team A vs team B">
+                  <ul role="menubar" class="flex-row justify-center gap-2 flex-wrap">
+                    <li role="none">
+                      <a
+                        href=""
+                        class="button secondary small"
+                        role="menuitem"
+                        tabindex="0"
+                        aria-label="Přejít na button 1">
+                        Button 1
+                      </a>
+                    </li>
+                    <li role="none">
+                      <a
+                        href="#"
+                        class="button secondary small"
+                        role="menuitem"
+                        tabindex="-1"
+                        aria-label="Přejít na button 2">
+                        Button 2
+                      </a>
+                    </li>
+                    <li role="none">
+                      <a
+                        href="#"
+                        class="button secondary small"
+                        role="menuitem"
+                        tabindex="-1"
+                        aria-label="Přejít na button 3">
+                        Button 3
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </div>
           </div>
-
-          <!-- Load tabs script -->
-          <script async src="./js/tabs.js"></script>
         </div>
       </section>
     </main>
